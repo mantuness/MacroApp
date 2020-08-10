@@ -172,6 +172,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7089B6A124DC0461009E6BEE /* base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
 		7089B6A524DCA7F1009E6BEE /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		7089B6A824DCA939009E6BEE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -533,6 +534,7 @@
 		70F6477124BDB2500081A3F6 = {
 			isa = PBXGroup;
 			children = (
+				708563FB24E1A9940014A62F /* README.md */,
 				70F6477C24BDB2500081A3F6 /* MacroApp */,
 				70F6479324BDB2530081A3F6 /* MacroAppTests */,
 				70C68F7524D456520009DFC6 /* Domain */,
