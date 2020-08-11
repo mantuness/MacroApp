@@ -1,8 +1,8 @@
 import UIKit
-import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    var appCoordinator: AppCoordinator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -11,26 +11,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-//        let browseVC = SettingsViewController()
-        
-//        Application.shared.container.resolve(SettingsViewController)
-//        Application.shared.container.resolve(AppCoordinator)
-        
-        let container = Container()
-        container.register(AppCoordinator.self) { r -> AppCoordinator in
-            let vc = r.resolve(SettingsViewController)
-            let app = AppCoordinator.init(settingsViewModelFactory: vc,
-                                settingsViewControllerFactory: <#T##SettingsViewControllerFactory#>,
-                                newScreenProvider: <#T##Provider<NewScreenViewController>#>,
-                                newFluxCoordinator: <#T##Provider<NewFluxCoordinator>#>)
-            vc.delegate = app
-        }
-        
-        let navigationVC = UINavigationController(rootViewController: UIViewController())
-        window.rootViewController = navigationVC
-        
         self.window = window
         window.makeKeyAndVisible()
+        
+        let appCoordinatorFactory = Application.shared.resolve(AppCoordinatorFactory.self)
+        appCoordinator = appCoordinatorFactory.create(window: window, coordinatorDelegate: self)
+        appCoordinator?.execute()
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -62,24 +48,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
-class Application {
-    static let shared: Application = Application()
-    
-    private let container: Container = Container()
-    private init() {
-        register()
-    }
-    
-    private func register() {
-        container.register(AppCoordinator.self) { r -> AppCoordinator in
-            AppCoordinator(settingsViewModelFactory: <#T##SettingsViewModelFactory#>,
-                           settingsViewControllerFactory: <#T##SettingsViewControllerFactory#>,
-                           newScreenProvider: <#T##Provider<NewScreenViewController>#>,
-                           newFluxCoordinator: <#T##Provider<NewFluxCoordinator>#>)
-        }
-    }
-    
-    func resolve<T>(type: T.Type) -> T {
-        container.resolve(type)!
+// MARK: - CoordinatorDelegate
+extension SceneDelegate: CoordinatorDelegate {
+    func didFinish(coordinator: Coordinator, arguments: [CoordinatorArgumentKey : Any]?) {
+        window = nil
+        appCoordinator = nil
     }
 }
+

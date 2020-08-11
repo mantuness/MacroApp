@@ -13,5 +13,3 @@ public struct JSFeatureFlags: Codable {
         self.badjorasDoModem = badjorasDoModem
     }
 }
-
-

@@ -6,7 +6,7 @@ public final class SetFeatureFlagValueUseCase: UseCase {
         public let featureFlag: FeatureFlag
     }
     private let appRepository: AppRepository
-    init(appRepository: AppRepository) {
+    public init(appRepository: AppRepository) {
         self.appRepository = appRepository
     }
     

@@ -1,5 +1,6 @@
 import Foundation
 import Domain
+import Swinject
 
 final class InitialViewModel {
     private let getConfigsUseCase: GetConfigsUseCase

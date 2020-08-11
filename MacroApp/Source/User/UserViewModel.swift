@@ -14,13 +14,14 @@ final class UserViewModel {
         self.createUserUseCase = createUserUseCase
         self.deleteUserUseCase = deleteUserUseCase
         self.getUserUseCase = getUserUseCase
+        self.id = id
     }
 }
 
 final class UserViewModelFactory {
-    let createUserProvider: Provider<CreateUserUseCase>
-    let deleteUserUseCaseProvider: Provider<DeleteUserUseCase>
-    let getUserUseCaseProvider: Provider<GetUserUseCase>
+    private let createUserProvider: Provider<CreateUserUseCase>
+    private let deleteUserUseCaseProvider: Provider<DeleteUserUseCase>
+    private let getUserUseCaseProvider: Provider<GetUserUseCase>
     init(createUserProvider: Provider<CreateUserUseCase>,
          deleteUserUseCaseProvider: Provider<DeleteUserUseCase>,
          getUserUseCaseProvider: Provider<GetUserUseCase>) {
@@ -35,8 +36,3 @@ final class UserViewModelFactory {
                              id: id)
     }
 }
-
-
-
-
-

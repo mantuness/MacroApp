@@ -2,7 +2,7 @@ import UIKit
 import Swinject
 
 protocol UserViewControllerDelegate: class {
-    func didTapSettings()
+    func goBack()
 }
 
 final class UserViewController: UIViewController {
@@ -11,6 +11,7 @@ final class UserViewController: UIViewController {
     init(viewModel: UserViewModel, delegate: UserViewControllerDelegate) {
         self.viewModel = viewModel
         self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -20,14 +21,21 @@ final class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isMovingFromParent || isBeingDismissed {
+            delegate?.goBack()
+        }
+    }
 }
 
 final class UserViewControllerFactory {
-    let provider: Provider<UserViewModel>
-    init(provider: Provider<UserViewModel>) {
-        self.provider = provider
+    private let viewModelFactory: UserViewModelFactory
+    init(viewModelFactory: UserViewModelFactory) {
+        self.viewModelFactory = viewModelFactory
     }
-    func create(delegate: UserViewControllerDelegate) -> UserViewController {
-        return UserViewController(viewModel: provider.instance, delegate: delegate)
+    func create(id: Int, delegate: UserViewControllerDelegate) -> UserViewController {
+        return UserViewController(viewModel: viewModelFactory.create(id: id), delegate: delegate)
     }
 }

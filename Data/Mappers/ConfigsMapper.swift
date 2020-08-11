@@ -14,7 +14,7 @@ extension JSPlatform.JSConfigs: DomainConvertibleType {
         guard let rottenMinimumValue = rottenTomatoesFreshMinimumValue,
             let value = Int(rottenMinimumValue),
             let spsEndpoint = spsEndpointHost,
-            let url = URL(string: spsEndpoint)else {
+            let url = URL(string: spsEndpoint) else {
                 throw NSError(domain: "Failed to map object", code: -99, userInfo: nil)
         }
         return Domain.Configs(rottenTomatoesFreshMinimumValue: value,

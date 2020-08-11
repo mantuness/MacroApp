@@ -7,7 +7,7 @@ public protocol AppService {
 
 public final class JSAppService: AppService {
     private let client: JSClient
-    init(client: JSClient) {
+    public init(client: JSClient) {
         self.client = client
     }
     

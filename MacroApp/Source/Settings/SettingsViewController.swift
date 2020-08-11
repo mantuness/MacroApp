@@ -2,7 +2,8 @@ import UIKit
 import Swinject
 
 protocol SettingsViewControllerDelegate: class {
-    func didPressButtonX()
+    func didPressUserButton(userId: Int)
+    func didTapClose()
 }
 
 final class SettingsViewController: UIViewController {
@@ -18,8 +19,52 @@ final class SettingsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
+        
+        textField.addTarget(self, action: #selector(editingDidChange), for: .editingChanged)
+        button.isEnabled = false
+        button.backgroundColor = .red
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @objc
+    private func editingDidChange() {
+        guard let text = textField.text,
+            let id = Int(text) else { return }
+        let isValid = viewModel.validateData(userId: id)
+        button.isEnabled = isValid
+        button.backgroundColor = isValid ? .green : .red
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        guard let text = textField.text,
+            let id = Int(text) else { return }
+        delegate?.didPressUserButton(userId: id)
+    }
+    @IBAction func didTapClose(_ sender: UIButton) {
+        delegate?.didTapClose()
+    }
+}
+
+final class SettingsViewControllerFactory {
+    private let viewModelProvider: Provider<SettingsViewModel>
+    init(viewModelProvider: Provider<SettingsViewModel>) {
+        self.viewModelProvider = viewModelProvider
+    }
+    func create(delegate: SettingsViewControllerDelegate) -> SettingsViewController {
+        return SettingsViewController(viewModel: viewModelProvider.instance, delegate: delegate)
     }
 }

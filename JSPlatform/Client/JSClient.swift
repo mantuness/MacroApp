@@ -1,16 +1,16 @@
 import Foundation
 import JavaScriptCore
 
-protocol JSClient {
+public protocol JSClient {
     func invokeMethod<T: Codable>(named: String, parameters: [Any]?, success: ((T) -> Void)?, failure: ((Error) -> Void)?)
     func invokeMethod(named: String, parameters: [Any]?, success: (() -> Void)?, failure: ((Error) -> Void)?)
 }
 
-final class JSClientImpl: JSClient {
+public final class JSClientImpl: JSClient {
     private let jsContext: JSContext = JSContext()
     private let mainJSValue: JSValue
     
-    init() {
+    public init() {
         guard let mainJSPath = Bundle(for: JSClientImpl.self).path(forResource: "main", ofType: "js"),
             let stringJS = try? String(contentsOfFile: mainJSPath, encoding: String.Encoding.utf8) else {
                 preconditionFailure("Failed to load JS context")
@@ -41,11 +41,11 @@ final class JSClientImpl: JSClient {
     //        mainJSValue.invokeMethod(named, withArguments: [])
     //    }
     
-    func invokeMethod<T>(named: String, parameters: [Any]?, success: ((T) -> Void)?, failure: ((Error) -> Void)?) {
+    public func invokeMethod<T>(named: String, parameters: [Any]?, success: ((T) -> Void)?, failure: ((Error) -> Void)?) {
         
     }
     
-    func invokeMethod(named: String, parameters: [Any]?, success: (() -> Void)?, failure: ((Error) -> Void)?) {
+    public func invokeMethod(named: String, parameters: [Any]?, success: (() -> Void)?, failure: ((Error) -> Void)?) {
         
     }
 }

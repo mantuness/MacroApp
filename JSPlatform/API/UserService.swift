@@ -8,7 +8,7 @@ public protocol UserService {
 
 public final class JSUserService: UserService {
     private let client: JSClient
-    init(client: JSClient) {
+    public init(client: JSClient) {
         self.client = client
     }
     

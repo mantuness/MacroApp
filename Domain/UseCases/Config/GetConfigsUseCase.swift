@@ -8,7 +8,7 @@ public final class GetConfigsUseCase: UseCase {
         }
     }
     private let appRepository: AppRepository
-    init(appRepository: AppRepository) {
+    public init(appRepository: AppRepository) {
         self.appRepository = appRepository
     }
     

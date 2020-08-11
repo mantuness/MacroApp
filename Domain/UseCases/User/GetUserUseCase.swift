@@ -6,7 +6,7 @@ public final class GetUserUseCase: UseCase {
         public let completion: (Result<User, Error>) -> Void
     }
     private let userRepository: UserRepository
-    init(userRepository: UserRepository) {
+    public init(userRepository: UserRepository) {
         self.userRepository = userRepository
     }
     

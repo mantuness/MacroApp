@@ -8,13 +8,13 @@ public final class CreateUserUseCase: UseCase {
     }
     
     private let userRepository: UserRepository
-    init(userRepository: UserRepository) {
+    public init(userRepository: UserRepository) {
         self.userRepository = userRepository
     }
     
-    public func execute(input: Input) -> Void {
-        return userRepository.createUser(name: input.name,
-                                         password: input.password,
-                                         completion: input.completion)
+    public func execute(input: Input) {
+        userRepository.createUser(name: input.name,
+                                  password: input.password,
+                                  completion: input.completion)
     }
 }

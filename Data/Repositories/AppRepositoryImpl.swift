@@ -4,7 +4,7 @@ import JSPlatform
 
 public final class AppRepositoryImpl: Domain.AppRepository {
     private let appService: JSPlatform.AppService
-    init(appService: JSPlatform.AppService) {
+    public init(appService: JSPlatform.AppService) {
         self.appService = appService
     }
     
