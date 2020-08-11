@@ -1,7 +1,6 @@
 import Foundation
 
-public protocol DeleteUserUseCase: Domain.UseCase {}
-public final class DeleteUserUseCaseImpl: DeleteUserUseCase {
+public final class DeleteUserUseCase: UseCase {
     private let userRepository: UserRepository
     init(userRepository: UserRepository) {
         self.userRepository = userRepository

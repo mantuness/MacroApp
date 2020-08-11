@@ -8,6 +8,13 @@ public final class UserRepositoryImpl: Domain.UserRepository {
         self.userService = userService
     }
     
+    public func getUser(id: Int, completion: @escaping (Result<User, Error>) -> Void) {
+        userService.getUser(id: id) { result in
+            let newResult = result.map { $0.asDomain() }
+            completion(newResult)
+        }
+    }
+    
     public func createUser(name: String, password: String, completion: (Result<Domain.User, Error>) -> Void) {
         let newClosure: (Result<JSPlatform.JSUser, Error>) -> Void = { result in
             let newResult = result.map { jsUser -> Domain.User in
@@ -17,7 +24,7 @@ public final class UserRepositoryImpl: Domain.UserRepository {
         }
         return userService.newUser(name: name, password: password, completion: newClosure)
     }
-
+    
     public func delete(id: Int) {
         return userService.deleteUser(id: id)
     }

@@ -1,4 +1,5 @@
 import UIKit
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -10,9 +11,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let browseVC = SettingsViewController()
+//        let browseVC = SettingsViewController()
         
-        let navigationVC = UINavigationController(rootViewController: browseVC)
+//        Application.shared.container.resolve(SettingsViewController)
+//        Application.shared.container.resolve(AppCoordinator)
+        
+        let container = Container()
+        container.register(AppCoordinator.self) { r -> AppCoordinator in
+            let vc = r.resolve(SettingsViewController)
+            let app = AppCoordinator.init(settingsViewModelFactory: vc,
+                                settingsViewControllerFactory: <#T##SettingsViewControllerFactory#>,
+                                newScreenProvider: <#T##Provider<NewScreenViewController>#>,
+                                newFluxCoordinator: <#T##Provider<NewFluxCoordinator>#>)
+            vc.delegate = app
+        }
+        
+        let navigationVC = UINavigationController(rootViewController: UIViewController())
         window.rootViewController = navigationVC
         
         self.window = window
@@ -45,5 +59,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+}
+
+class Application {
+    static let shared: Application = Application()
+    
+    private let container: Container = Container()
+    private init() {
+        register()
+    }
+    
+    private func register() {
+        container.register(AppCoordinator.self) { r -> AppCoordinator in
+            AppCoordinator(settingsViewModelFactory: <#T##SettingsViewModelFactory#>,
+                           settingsViewControllerFactory: <#T##SettingsViewControllerFactory#>,
+                           newScreenProvider: <#T##Provider<NewScreenViewController>#>,
+                           newFluxCoordinator: <#T##Provider<NewFluxCoordinator>#>)
+        }
+    }
+    
+    func resolve<T>(type: T.Type) -> T {
+        container.resolve(type)!
     }
 }

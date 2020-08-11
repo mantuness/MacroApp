@@ -1,6 +1,6 @@
 import Foundation
 
-public struct User {
+public struct User: Hashable {
     public let id: Int
     public let name: String
     

@@ -1,11 +1,10 @@
 import Foundation
 
-public protocol CreateUserUseCase: UseCase {}
-public final class CreateUserUseCaseImpl: CreateUserUseCase {
+public final class CreateUserUseCase: UseCase {
     public struct Input {
-        let name: String
-        let password: String
-        let completion: (Result<User, Error>) -> Void
+        public let name: String
+        public let password: String
+        public let completion: (Result<User, Error>) -> Void
     }
     
     private let userRepository: UserRepository

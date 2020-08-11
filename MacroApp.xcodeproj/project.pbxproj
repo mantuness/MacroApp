@@ -7,9 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7089B6A624DCA7F1009E6BEE /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6A524DCA7F1009E6BEE /* UseCaseProvider.swift */; };
-		7089B6A924DCA939009E6BEE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6A824DCA939009E6BEE /* Config.swift */; };
-		7089B6AC24DCA964009E6BEE /* ConfigUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6AB24DCA964009E6BEE /* ConfigUseCase.swift */; };
+		708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; };
+		708563FE24E1AB3B0014A62F /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708563FF24E1ABE50014A62F /* SettingsViewModel.swift */; };
+		7085640224E1B0250014A62F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085640124E1B0250014A62F /* AppCoordinator.swift */; };
+		7085640924E1B79B0014A62F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085640724E1B79B0014A62F /* UserViewController.swift */; };
+		7085640A24E1B79B0014A62F /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7085640824E1B79B0014A62F /* UserViewController.xib */; };
+		7085640E24E1FE750014A62F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085640C24E1FE750014A62F /* InitialViewController.swift */; };
+		7085640F24E1FE750014A62F /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7085640D24E1FE750014A62F /* InitialViewController.xib */; };
+		7085641124E1FEB30014A62F /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085641024E1FEB30014A62F /* InitialViewModel.swift */; };
+		7085641324E1FF3F0014A62F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085641224E1FF3F0014A62F /* UserViewModel.swift */; };
+		7085641624E201310014A62F /* GetUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085641524E201310014A62F /* GetUserUseCase.swift */; };
+		7085641924E2063F0014A62F /* GetConfigsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085641824E2063F0014A62F /* GetConfigsUseCase.swift */; };
+		7085641B24E207080014A62F /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085641A24E207080014A62F /* AppRepository.swift */; };
+		7085642124E211140014A62F /* FeatureFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642024E211140014A62F /* FeatureFlag.swift */; };
+		7085642424E212720014A62F /* GetFeatureFlagsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642324E212720014A62F /* GetFeatureFlagsUseCase.swift */; };
+		7085642624E212DE0014A62F /* SetFeatureFlagValueUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642524E212DE0014A62F /* SetFeatureFlagValueUseCase.swift */; };
+		7085642824E213840014A62F /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642724E213840014A62F /* AppService.swift */; };
+		7085642A24E216E40014A62F /* JSFeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642924E216E40014A62F /* JSFeatureFlags.swift */; };
+		7085642C24E218630014A62F /* ConfigsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642B24E218630014A62F /* ConfigsMapper.swift */; };
+		7085642E24E21C470014A62F /* AppRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642D24E21C470014A62F /* AppRepositoryImpl.swift */; };
+		7085643024E21D4B0014A62F /* FeatureFlagsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642F24E21D4B0014A62F /* FeatureFlagsMapper.swift */; };
+		7089B6A924DCA939009E6BEE /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6A824DCA939009E6BEE /* Configs.swift */; };
 		7089B6CF24DD4ACF009E6BEE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7089B6C624DD4ACF009E6BEE /* Data.framework */; };
 		7089B6D624DD4ACF009E6BEE /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6D524DD4ACF009E6BEE /* DataTests.swift */; };
 		7089B6D824DD4ACF009E6BEE /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 7089B6C824DD4ACF009E6BEE /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,8 +37,6 @@
 		7089B6F024DD4AF9009E6BEE /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C68F7424D456520009DFC6 /* Domain.framework */; };
 		7089B6F124DD4AF9009E6BEE /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70C68F7424D456520009DFC6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7089B70424DD4B87009E6BEE /* JSRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6F524DD4B17009E6BEE /* JSRepresentable.swift */; };
-		7089B70624DD4B87009E6BEE /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6F924DD4B1D009E6BEE /* UseCaseProvider.swift */; };
-		7089B70724DD4B87009E6BEE /* ConfigUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6F824DD4B1D009E6BEE /* ConfigUseCase.swift */; };
 		7089B71124DD5561009E6BEE /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6F624DD4B17009E6BEE /* DomainConvertibleType.swift */; };
 		7089B71324DDA12B009E6BEE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B71224DDA12B009E6BEE /* User.swift */; };
 		70C0061F24E13B9D0036AFAB /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0061E24E13B9D0036AFAB /* UseCase.swift */; };
@@ -34,7 +51,7 @@
 		70C0064924E1486B0036AFAB /* JSPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; };
 		70C0064A24E1486B0036AFAB /* JSPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70C0066324E148D20036AFAB /* JSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0065A24E148D20036AFAB /* JSClient.swift */; };
-		70C0066424E148D20036AFAB /* JSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0065C24E148D20036AFAB /* JSConfig.swift */; };
+		70C0066424E148D20036AFAB /* JSConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0065C24E148D20036AFAB /* JSConfigs.swift */; };
 		70C0066524E148D20036AFAB /* JSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0065D24E148D20036AFAB /* JSUser.swift */; };
 		70C0066624E148D20036AFAB /* XMLHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C0066024E148D20036AFAB /* XMLHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70C0066724E148D20036AFAB /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 70C0066124E148D20036AFAB /* main.js */; };
@@ -163,6 +180,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7089B6DC24DD4ACF009E6BEE /* Data.framework in Embed Frameworks */,
+				708563FE24E1AB3B0014A62F /* Swinject.framework in Embed Frameworks */,
 				70C0064A24E1486B0036AFAB /* JSPlatform.framework in Embed Frameworks */,
 				70C68F8A24D456520009DFC6 /* Domain.framework in Embed Frameworks */,
 			);
@@ -173,10 +191,28 @@
 
 /* Begin PBXFileReference section */
 		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		708563FC24E1AB3B0014A62F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		708563FF24E1ABE50014A62F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		7085640124E1B0250014A62F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7085640724E1B79B0014A62F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		7085640824E1B79B0014A62F /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		7085640C24E1FE750014A62F /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		7085640D24E1FE750014A62F /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
+		7085641024E1FEB30014A62F /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		7085641224E1FF3F0014A62F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		7085641524E201310014A62F /* GetUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCase.swift; sourceTree = "<group>"; };
+		7085641824E2063F0014A62F /* GetConfigsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConfigsUseCase.swift; sourceTree = "<group>"; };
+		7085641A24E207080014A62F /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
+		7085642024E211140014A62F /* FeatureFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlag.swift; sourceTree = "<group>"; };
+		7085642324E212720014A62F /* GetFeatureFlagsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeatureFlagsUseCase.swift; sourceTree = "<group>"; };
+		7085642524E212DE0014A62F /* SetFeatureFlagValueUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFeatureFlagValueUseCase.swift; sourceTree = "<group>"; };
+		7085642724E213840014A62F /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		7085642924E216E40014A62F /* JSFeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSFeatureFlags.swift; sourceTree = "<group>"; };
+		7085642B24E218630014A62F /* ConfigsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigsMapper.swift; sourceTree = "<group>"; };
+		7085642D24E21C470014A62F /* AppRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepositoryImpl.swift; sourceTree = "<group>"; };
+		7085642F24E21D4B0014A62F /* FeatureFlagsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlagsMapper.swift; sourceTree = "<group>"; };
 		7089B6A124DC0461009E6BEE /* base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
-		7089B6A524DCA7F1009E6BEE /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
-		7089B6A824DCA939009E6BEE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		7089B6AB24DCA964009E6BEE /* ConfigUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigUseCase.swift; sourceTree = "<group>"; };
+		7089B6A824DCA939009E6BEE /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		7089B6C624DD4ACF009E6BEE /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7089B6C824DD4ACF009E6BEE /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		7089B6C924DD4ACF009E6BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,8 +221,6 @@
 		7089B6D724DD4ACF009E6BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7089B6F524DD4B17009E6BEE /* JSRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSRepresentable.swift; sourceTree = "<group>"; };
 		7089B6F624DD4B17009E6BEE /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
-		7089B6F824DD4B1D009E6BEE /* ConfigUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigUseCase.swift; sourceTree = "<group>"; };
-		7089B6F924DD4B1D009E6BEE /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		7089B71224DDA12B009E6BEE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		70C0061E24E13B9D0036AFAB /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		70C0062124E13BDC0036AFAB /* CreateUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserUseCase.swift; sourceTree = "<group>"; };
@@ -201,7 +235,7 @@
 		70C0064324E1486B0036AFAB /* JSPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSPlatformTests.swift; sourceTree = "<group>"; };
 		70C0064524E1486B0036AFAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70C0065A24E148D20036AFAB /* JSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSClient.swift; sourceTree = "<group>"; };
-		70C0065C24E148D20036AFAB /* JSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSConfig.swift; sourceTree = "<group>"; };
+		70C0065C24E148D20036AFAB /* JSConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSConfigs.swift; sourceTree = "<group>"; };
 		70C0065D24E148D20036AFAB /* JSUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSUser.swift; sourceTree = "<group>"; };
 		70C0065F24E148D20036AFAB /* main.js.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = main.js.map; sourceTree = "<group>"; };
 		70C0066024E148D20036AFAB /* XMLHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLHTTPRequest.h; sourceTree = "<group>"; };
@@ -286,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7089B6DB24DD4ACF009E6BEE /* Data.framework in Frameworks */,
+				708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */,
 				70C0064924E1486B0036AFAB /* JSPlatform.framework in Frameworks */,
 				70C68F8924D456520009DFC6 /* Domain.framework in Frameworks */,
 			);
@@ -301,6 +336,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7085640524E1B3F80014A62F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				708563FF24E1ABE50014A62F /* SettingsViewModel.swift */,
+				70F6478124BDB2500081A3F6 /* SettingsViewController.swift */,
+				70F647B824BDB7D00081A3F6 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7085640624E1B7610014A62F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7085641224E1FF3F0014A62F /* UserViewModel.swift */,
+				7085640724E1B79B0014A62F /* UserViewController.swift */,
+				7085640824E1B79B0014A62F /* UserViewController.xib */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		7085640B24E1FE530014A62F /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				7085641024E1FEB30014A62F /* InitialViewModel.swift */,
+				7085640C24E1FE750014A62F /* InitialViewController.swift */,
+				7085640D24E1FE750014A62F /* InitialViewController.xib */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		7085641424E201200014A62F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				70C0062124E13BDC0036AFAB /* CreateUserUseCase.swift */,
+				70C0062624E13C410036AFAB /* DeleteUserUseCase.swift */,
+				7085641524E201310014A62F /* GetUserUseCase.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		7085641724E206090014A62F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7085641824E2063F0014A62F /* GetConfigsUseCase.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7085642224E212550014A62F /* FeatureFlag */ = {
+			isa = PBXGroup;
+			children = (
+				7085642324E212720014A62F /* GetFeatureFlagsUseCase.swift */,
+				7085642524E212DE0014A62F /* SetFeatureFlagValueUseCase.swift */,
+			);
+			path = FeatureFlag;
+			sourceTree = "<group>";
+		};
 		7089B6A224DC0484009E6BEE /* prd */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,24 +423,17 @@
 		7089B6A724DCA924009E6BEE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7089B6A824DCA939009E6BEE /* Config.swift */,
+				7085642024E211140014A62F /* FeatureFlag.swift */,
+				7089B6A824DCA939009E6BEE /* Configs.swift */,
 				7089B71224DDA12B009E6BEE /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		7089B6AA24DCA94C009E6BEE /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				7089B6A524DCA7F1009E6BEE /* UseCaseProvider.swift */,
-				7089B6AB24DCA964009E6BEE /* ConfigUseCase.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
 		7089B6AD24DCAA43009E6BEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				708563FC24E1AB3B0014A62F /* Swinject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -358,7 +443,6 @@
 			children = (
 				70C0062C24E146300036AFAB /* Mappers */,
 				70C0062924E13D5D0036AFAB /* Repositories */,
-				70C0067124E192FA0036AFAB /* Old */,
 				7089B6C824DD4ACF009E6BEE /* Data.h */,
 				7089B6C924DD4ACF009E6BEE /* Info.plist */,
 			);
@@ -374,15 +458,6 @@
 			path = DataTests;
 			sourceTree = "<group>";
 		};
-		7089B6EC24DD4AEA009E6BEE /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				7089B6F924DD4B1D009E6BEE /* UseCaseProvider.swift */,
-				7089B6F824DD4B1D009E6BEE /* ConfigUseCase.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
 		7089B6EF24DD4AEA009E6BEE /* Convertion */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,8 +471,9 @@
 			isa = PBXGroup;
 			children = (
 				70C0061E24E13B9D0036AFAB /* UseCase.swift */,
-				70C0062124E13BDC0036AFAB /* CreateUserUseCase.swift */,
-				70C0062624E13C410036AFAB /* DeleteUserUseCase.swift */,
+				7085641424E201200014A62F /* User */,
+				7085641724E206090014A62F /* Config */,
+				7085642224E212550014A62F /* FeatureFlag */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -406,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				70C0062424E13C1C0036AFAB /* UserRepository.swift */,
+				7085641A24E207080014A62F /* AppRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -414,6 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				70C0062A24E13D760036AFAB /* UserRepositoryImpl.swift */,
+				7085642D24E21C470014A62F /* AppRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -423,6 +501,8 @@
 			children = (
 				7089B6EF24DD4AEA009E6BEE /* Convertion */,
 				70C0062D24E146490036AFAB /* UserMapper.swift */,
+				7085642B24E218630014A62F /* ConfigsMapper.swift */,
+				7085642F24E21D4B0014A62F /* FeatureFlagsMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -460,8 +540,9 @@
 		70C0065B24E148D20036AFAB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				70C0065C24E148D20036AFAB /* JSConfig.swift */,
+				70C0065C24E148D20036AFAB /* JSConfigs.swift */,
 				70C0065D24E148D20036AFAB /* JSUser.swift */,
+				7085642924E216E40014A62F /* JSFeatureFlags.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -488,25 +569,10 @@
 		70C0066E24E14D0D0036AFAB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7085642724E213840014A62F /* AppService.swift */,
 				70C0066F24E14D2E0036AFAB /* UserService.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		70C0067124E192FA0036AFAB /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				7089B6EC24DD4AEA009E6BEE /* UseCases */,
-			);
-			path = Old;
-			sourceTree = "<group>";
-		};
-		70C0067224E193110036AFAB /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				7089B6AA24DCA94C009E6BEE /* UseCases */,
-			);
-			path = Old;
 			sourceTree = "<group>";
 		};
 		70C68F7524D456520009DFC6 /* Domain */ = {
@@ -515,7 +581,6 @@
 				70C0062024E13BCC0036AFAB /* UseCases */,
 				70C0062324E13C060036AFAB /* Repositories */,
 				7089B6A724DCA924009E6BEE /* Models */,
-				70C0067224E193110036AFAB /* Old */,
 				70C68F7624D456520009DFC6 /* Domain.h */,
 				70C68F7724D456520009DFC6 /* Info.plist */,
 			);
@@ -587,8 +652,10 @@
 		70F6479F24BDB3150081A3F6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				70F6478124BDB2500081A3F6 /* SettingsViewController.swift */,
-				70F647B824BDB7D00081A3F6 /* SettingsViewController.xib */,
+				7085640124E1B0250014A62F /* AppCoordinator.swift */,
+				7085640B24E1FE530014A62F /* Initial */,
+				7085640624E1B7610014A62F /* User */,
+				7085640524E1B3F80014A62F /* Settings */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -922,6 +989,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F6478A24BDB2520081A3F6 /* LaunchScreen.storyboard in Resources */,
+				7085640A24E1B79B0014A62F /* UserViewController.xib in Resources */,
+				7085640F24E1FE750014A62F /* InitialViewController.xib in Resources */,
 				70F647B924BDB7D00081A3F6 /* SettingsViewController.xib in Resources */,
 				70F6478724BDB2520081A3F6 /* Assets.xcassets in Resources */,
 			);
@@ -941,12 +1010,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7085643024E21D4B0014A62F /* FeatureFlagsMapper.swift in Sources */,
 				70C0062B24E13D760036AFAB /* UserRepositoryImpl.swift in Sources */,
+				7085642E24E21C470014A62F /* AppRepositoryImpl.swift in Sources */,
 				70C0062E24E146490036AFAB /* UserMapper.swift in Sources */,
+				7085642C24E218630014A62F /* ConfigsMapper.swift in Sources */,
 				7089B70424DD4B87009E6BEE /* JSRepresentable.swift in Sources */,
 				7089B71124DD5561009E6BEE /* DomainConvertibleType.swift in Sources */,
-				7089B70724DD4B87009E6BEE /* ConfigUseCase.swift in Sources */,
-				7089B70624DD4B87009E6BEE /* UseCaseProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,7 +1032,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C0066424E148D20036AFAB /* JSConfig.swift in Sources */,
+				70C0066424E148D20036AFAB /* JSConfigs.swift in Sources */,
+				7085642A24E216E40014A62F /* JSFeatureFlags.swift in Sources */,
+				7085642824E213840014A62F /* AppService.swift in Sources */,
 				70C0067024E14D2E0036AFAB /* UserService.swift in Sources */,
 				70C0066824E148D20036AFAB /* XMLHTTPRequest.m in Sources */,
 				70C0066324E148D20036AFAB /* JSClient.swift in Sources */,
@@ -983,13 +1055,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				70C0061F24E13B9D0036AFAB /* UseCase.swift in Sources */,
+				7085642624E212DE0014A62F /* SetFeatureFlagValueUseCase.swift in Sources */,
+				7085642424E212720014A62F /* GetFeatureFlagsUseCase.swift in Sources */,
 				7089B71324DDA12B009E6BEE /* User.swift in Sources */,
-				7089B6A624DCA7F1009E6BEE /* UseCaseProvider.swift in Sources */,
+				7085642124E211140014A62F /* FeatureFlag.swift in Sources */,
+				7085641924E2063F0014A62F /* GetConfigsUseCase.swift in Sources */,
+				7085641624E201310014A62F /* GetUserUseCase.swift in Sources */,
+				7085641B24E207080014A62F /* AppRepository.swift in Sources */,
 				70C0062524E13C1C0036AFAB /* UserRepository.swift in Sources */,
-				7089B6AC24DCA964009E6BEE /* ConfigUseCase.swift in Sources */,
 				70C0062724E13C410036AFAB /* DeleteUserUseCase.swift in Sources */,
 				70C0062224E13BDC0036AFAB /* CreateUserUseCase.swift in Sources */,
-				7089B6A924DCA939009E6BEE /* Config.swift in Sources */,
+				7089B6A924DCA939009E6BEE /* Configs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,9 +1081,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7085640224E1B0250014A62F /* AppCoordinator.swift in Sources */,
+				7085640E24E1FE750014A62F /* InitialViewController.swift in Sources */,
 				70F6478224BDB2500081A3F6 /* SettingsViewController.swift in Sources */,
 				70F6477E24BDB2500081A3F6 /* AppDelegate.swift in Sources */,
 				70F6478024BDB2500081A3F6 /* SceneDelegate.swift in Sources */,
+				7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */,
+				7085640924E1B79B0014A62F /* UserViewController.swift in Sources */,
+				7085641324E1FF3F0014A62F /* UserViewModel.swift in Sources */,
+				7085641124E1FEB30014A62F /* InitialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2069,6 +2151,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2088,6 +2174,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2211,6 +2301,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2306,6 +2400,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2407,6 +2505,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2502,6 +2604,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
