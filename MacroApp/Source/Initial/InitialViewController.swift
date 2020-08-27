@@ -3,6 +3,7 @@ import Swinject
 
 protocol InitialViewControllerDelegate: class {
     func didTapSettingsButton()
+    func didTapSettingsNonDIButton()
 }
 
 final class InitialViewController: UIViewController {
@@ -25,6 +26,10 @@ final class InitialViewController: UIViewController {
     
     @IBAction func didTapButton(_ sender: UIButton) {
         delegate?.didTapSettingsButton()
+    }
+    
+    @IBAction func didTapSettingsNonDIButton(_ sender: UIButton) {
+        delegate?.didTapSettingsNonDIButton()
     }
 }
 

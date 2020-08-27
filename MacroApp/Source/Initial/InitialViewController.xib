@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,6 +30,13 @@
                         <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="84G-JM-sel"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qm-qs-QjZ">
+                    <rect key="frame" x="135" y="478" width="145" height="30"/>
+                    <state key="normal" title="Go to settings non DI"/>
+                    <connections>
+                        <action selector="didTapSettingsNonDIButton:" destination="-1" eventType="touchUpInside" id="7pj-gc-vhH"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -38,6 +45,7 @@
                 <constraint firstItem="bx3-NA-b6W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SBy-rf-F7r"/>
                 <constraint firstItem="bx3-NA-b6W" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bG1-tj-htT"/>
                 <constraint firstItem="bx3-NA-b6W" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="95" id="rGD-7a-jCX"/>
+                <constraint firstItem="8qm-qs-QjZ" firstAttribute="top" secondItem="oXj-7l-X8G" secondAttribute="bottom" constant="15" id="zKB-aH-pd5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="153"/>

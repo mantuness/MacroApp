@@ -1,27 +1,30 @@
 import UIKit
 import Swinject
 
-final class MyAccountCoordinator: Coordinator {
+final class MyAccountNonDiCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     weak var delegate: CoordinatorDelegate?
     
     private var navigationVC: UINavigationController?
     
-    private let userViewControllerFactory: UserViewControllerFactory
-    private let settingsViewControllerFactory: SettingsViewControllerFactory
+    private let settingsViewControllerFactory: SettingsNonDIViewControllerFactory
+    private let settingsViewModel: SettingsViewModel
     private let anchorVC: UIViewController
-    init(userViewControllerFactory: UserViewControllerFactory,
-         settingsViewControllerFactory: SettingsViewControllerFactory,
+    
+    init(settingsViewControllerFactory: SettingsNonDIViewControllerFactory,
+         settingsViewModel: SettingsViewModel,
          delegate: CoordinatorDelegate,
          anchorVC: UIViewController) {
-        self.userViewControllerFactory = userViewControllerFactory
         self.settingsViewControllerFactory = settingsViewControllerFactory
+        self.settingsViewModel = settingsViewModel
         self.delegate = delegate
         self.anchorVC = anchorVC
     }
     
     func execute() {
-        let settingsVC = settingsViewControllerFactory.create(delegate: self)
+        
+        
+        let settingsVC = settingsViewControllerFactory.create(viewModel: settingsViewModel, delegate: self)
         navigationVC = UINavigationController(rootViewController: settingsVC)
         navigationVC?.modalPresentationStyle = .fullScreen
         anchorVC.present(navigationVC!, animated: false, completion: nil)
@@ -29,10 +32,9 @@ final class MyAccountCoordinator: Coordinator {
 }
 
 // MARK: - SettingsViewControllerDelegate
-extension MyAccountCoordinator: SettingsViewControllerDelegate {
+extension MyAccountNonDiCoordinator: SettingsViewControllerDelegate {
     func didPressUserButton(userId: Int) {
-        let userVC = userViewControllerFactory.create(id: userId, delegate: self)
-        navigationVC?.pushViewController(userVC, animated: true)
+        
     }
     
     func didTapClose() {
@@ -43,24 +45,28 @@ extension MyAccountCoordinator: SettingsViewControllerDelegate {
 }
 
 // MARK: - UserViewControllerDelegate
-extension MyAccountCoordinator: UserViewControllerDelegate {
+extension MyAccountNonDiCoordinator: UserViewControllerDelegate {
     func goBack() {
         // Just for demo purposes, the user controller is already being popped by iOS  (check viewDidDisappear from UserViewController)
     }
 }
 
-final class MyAccountCoordinatorFactory {
-    private let userViewControllerFactory: UserViewControllerFactory
-    private let settingsViewControllerFactory: SettingsViewControllerFactory
-    init(userViewControllerFactory: UserViewControllerFactory, settingsViewControllerFactory: SettingsViewControllerFactory) {
-        self.userViewControllerFactory = userViewControllerFactory
+final class MyAccountNonDICoordinatorFactory {
+    private let settingsViewControllerFactory: SettingsNonDIViewControllerFactory
+    private let settingsViewModel: SettingsViewModel
+    
+    init(settingsViewControllerFactory: SettingsNonDIViewControllerFactory, settingsViewModel: SettingsViewModel) {
         self.settingsViewControllerFactory = settingsViewControllerFactory
+        self.settingsViewModel = settingsViewModel
     }
     
-    func create(anchorVC: UIViewController, coordinatorDelegate: CoordinatorDelegate) -> MyAccountCoordinator {
-        return MyAccountCoordinator(userViewControllerFactory: userViewControllerFactory,
-                                    settingsViewControllerFactory: settingsViewControllerFactory,
-                                    delegate: coordinatorDelegate,
-                                    anchorVC: anchorVC)
+    func create(anchorVC: UIViewController, coordinatorDelegate: CoordinatorDelegate) -> MyAccountNonDiCoordinator {
+        return MyAccountNonDiCoordinator(
+            settingsViewControllerFactory: settingsViewControllerFactory.self,
+            settingsViewModel: settingsViewModel,
+            delegate: coordinatorDelegate,
+            anchorVC: anchorVC
+        )
     }
+    
 }

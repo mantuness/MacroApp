@@ -29,18 +29,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-//protocol ViewModelProvider {}
-//extension ViewModelProvider {
-//    var provider: Domain.UseCaseProvider {
-//        return JSUseCaseProvider()
-//    }
-//}
-//
-//class Application {
-//    let useCaseProvider: Domain.UseCaseProvider
-//    
-//    let shared = Application()
-//    private init() {
-//        useCaseProvider = JSUseCaseProvider()
-//    }
-//}

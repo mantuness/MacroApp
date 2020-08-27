@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512317EA24F4286B003AE4AB /* MyAccountNonDiCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */; };
+		51C0AB9524F7A410003B1C98 /* SettingsNonDIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */; };
 		708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; };
 		708563FE24E1AB3B0014A62F /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708563FF24E1ABE50014A62F /* SettingsViewModel.swift */; };
@@ -201,6 +203,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		512317E324F42691003AE4AB /* SettingsNonDIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIViewController.swift; sourceTree = "<group>"; };
+		512317E524F426A1003AE4AB /* SettingsNonDIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIViewModel.swift; sourceTree = "<group>"; };
+		512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIFactory.swift; sourceTree = "<group>"; };
+		512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountNonDiCoordinator.swift; sourceTree = "<group>"; };
 		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		708563FC24E1AB3B0014A62F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		708563FF24E1ABE50014A62F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -358,6 +364,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		512317E224F4267A003AE4AB /* Settings Non Di */ = {
+			isa = PBXGroup;
+			children = (
+				512317E524F426A1003AE4AB /* SettingsNonDIViewModel.swift */,
+				512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */,
+				512317E324F42691003AE4AB /* SettingsNonDIViewController.swift */,
+			);
+			path = "Settings Non Di";
+			sourceTree = "<group>";
+		};
 		7085640524E1B3F80014A62F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +437,7 @@
 			children = (
 				7085643324E2AA600014A62F /* Coordinator.swift */,
 				7085640124E1B0250014A62F /* AppCoordinator.swift */,
+				512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */,
 				7085643524E2E5920014A62F /* MyAccountCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -711,6 +728,7 @@
 			children = (
 				7085643724E2F9610014A62F /* Coordinators */,
 				7085640B24E1FE530014A62F /* Initial */,
+				512317E224F4267A003AE4AB /* Settings Non Di */,
 				7085640524E1B3F80014A62F /* Settings */,
 				7085640624E1B7610014A62F /* User */,
 			);
@@ -1139,6 +1157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512317EA24F4286B003AE4AB /* MyAccountNonDiCoordinator.swift in Sources */,
 				7085644B24E35A120014A62F /* ViewControllerAssembly.swift in Sources */,
 				7085643B24E2FD520014A62F /* Application.swift in Sources */,
 				7085640224E1B0250014A62F /* AppCoordinator.swift in Sources */,
@@ -1157,6 +1176,7 @@
 				7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */,
 				7085640924E1B79B0014A62F /* UserViewController.swift in Sources */,
 				7085641324E1FF3F0014A62F /* UserViewModel.swift in Sources */,
+				51C0AB9524F7A410003B1C98 /* SettingsNonDIFactory.swift in Sources */,
 				7085641124E1FEB30014A62F /* InitialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
