@@ -11,9 +11,9 @@ This project was designed taking into consideration a clean architecture and a M
 
 ### Regarding dependencies:
 - Domain - depends on no one
-- App - depends on every module (Domain, Data, JSPlatform)
 - Data - depends on Domain and JSPlatform or any other service/platform implementation (example: Persistence DB)
 - JSPlatform - depends on no one
+- App - depends on every module (Domain, Data, JSPlatform)
 
 ### Additional notes:
 JSPlatform module was created to abstract all JS layer (tried an approach like a network API, please check the folder API that will have all the "services" provided by JS)
