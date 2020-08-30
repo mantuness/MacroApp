@@ -4,6 +4,55 @@ import Data
 import Domain
 import JSPlatform
 
+extension JSClientImpl {
+    static let mock = JSClientImpl()
+}
+
+extension JSAppService {
+    static let mock = JSAppService(client: JSClientImpl.mock)
+}
+
+extension AppRepositoryImpl {
+    static let mock = AppRepositoryImpl(appService: JSAppService.mock)
+}
+
+extension GetFeatureFlagsUseCase {
+    static let mock = GetFeatureFlagsUseCase(appRepository: AppRepositoryImpl.mock)
+}
+
+struct GlobalEnvironment {
+    var appRepository = AppRepositoryImpl(appService: JSAppService(client: JSClientImpl()))
+    var getFFUseCase: GetFeatureFlagsUseCase {
+        .init(appRepository: appRepository)
+    }
+    
+    var setFFUseCase: SetFeatureFlagValueUseCase {
+        .init(appRepository: appRepository)
+    }
+    
+    var getConfigsUseCase: GetConfigsUseCase {
+        .init(appRepository: appRepository)
+    }
+    
+    var validateUserIdUseCase = ValidateUserIdUseCase()
+    
+    var settingsEnvironment: SettingsEnvironment {
+        .init()
+    }
+}
+
+struct SettingsEnvironment {
+    var factory = SettingsNonDIViewControllerFactory()
+    var viewModel = SettingsViewModel(
+        getFFUseCase: Current.getFFUseCase,
+        setFFValueUseCase: Current.setFFUseCase,
+        getConfigsUseCase: Current.getConfigsUseCase,
+        validateUserIdUseCase: Current.validateUserIdUseCase
+    )
+}
+
+var Current = GlobalEnvironment()
+
 final class AppCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     weak var delegate: CoordinatorDelegate?
@@ -44,7 +93,7 @@ extension AppCoordinator: InitialViewControllerDelegate {
     
     /// This is alternative solution, not using swinject
     /// This delegate function is no longer testable, we have a bunch of depencies that are being created here that we have no way to inject.
-    /// The only solution to this would be to store this dependencies as class properties of the AppCoordinator 
+    /// The only solution to this would be to store this dependencies as class properties of the AppCoordinator
     func didTapSettingsNonDIButton() {
         let client = JSClientImpl()
         let jsAppService = JSAppService(client: client)
@@ -58,6 +107,18 @@ extension AppCoordinator: InitialViewControllerDelegate {
                 getConfigsUseCase: .init(appRepository: appRepository),
                 validateUserIdUseCase: .init()
             ),
+            delegate: self,
+            anchorVC: window.rootViewController!
+        )
+        addChildCoordinator(myAccountCoordinator)
+        myAccountCoordinator.execute()
+    }
+    
+    func didTapSettingsCurrentPatternButton() {
+        let settingsEnvironment = Current.settingsEnvironment
+        let myAccountCoordinator = MyAccountNonDiCoordinator(
+            settingsViewControllerFactory: settingsEnvironment.factory,
+            settingsViewModel: settingsEnvironment.viewModel,
             delegate: self,
             anchorVC: window.rootViewController!
         )
