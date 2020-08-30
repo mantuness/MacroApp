@@ -10,10 +10,10 @@ This project was designed taking into consideration a clean architecture and a M
 - App (MVVM+C) = ViewModels + Views + Coordinators
 
 ### Regarding dependencies:
-Domain - depends on no one
-App - depends on every module (Domain, Data, JSPlatform)
-Data - depends on Domain and JSPlatform or any other service/platform implementation (example: Persistence DB)
-JSPlatform - depends on no one
+- Domain - depends on no one
+- App - depends on every module (Domain, Data, JSPlatform)
+- Data - depends on Domain and JSPlatform or any other service/platform implementation (example: Persistence DB)
+- JSPlatform - depends on no one
 
 ### Additional notes:
 JSPlatform module was created to abstract all JS layer (tried an approach like a network API, please check the folder API that will have all the "services" provided by JS)
@@ -22,5 +22,5 @@ In the end what will happen is:
 ViewController -> ViewModel -> UseCases -> Repositories -> "Services/Platforms"
 
 ## Some useful links and inspiration:
-[CleanArchitectureRxSwift](https://github.com/sergdort/CleanArchitectureRxSwift) by sergdort
-[The Clean Code Blog](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) by Uncle Bob
+- [CleanArchitectureRxSwift](https://github.com/sergdort/CleanArchitectureRxSwift) by sergdort
+- [The Clean Code Blog](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) by Uncle Bob
