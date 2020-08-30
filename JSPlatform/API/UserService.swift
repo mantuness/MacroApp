@@ -2,8 +2,8 @@ import Foundation
 
 public protocol UserService {
     func getUser(id: Int, completion: @escaping (Result<JSUser, Error>) -> Void)
-    func newUser(name: String, password: String, completion: (Result<JSUser, Error>) -> Void) // (Different team implementing these services)
-    func deleteUser(id: Int)
+    func newUser(name: String, password: String, completion: @escaping (Result<JSUser, Error>) -> Void)
+    func deleteUser(id: Int, completion: @escaping (Result<Void, Error>) -> Void )
 }
 
 public final class JSUserService: UserService {
@@ -13,21 +13,14 @@ public final class JSUserService: UserService {
     }
     
     public func getUser(id: Int, completion: @escaping (Result<JSUser, Error>) -> Void) {
-        let successClosure: (JSUser) -> Void = { jsUser in
-            completion(Result.success(jsUser))
-        }
-        
-        let failureClosure: (Error) -> Void = { error in
-            completion(Result.failure(error))
-        }
-        client.invokeMethod(named: "GET.USER", parameters: [id], success: successClosure, failure: failureClosure)
+        client.invokeMethod(named: "JSDispatcherModule.getUser", parameters: [id], completion: completion)
     }
     
-    public func newUser(name: String, password: String, completion: (Result<JSUser, Error>) -> Void) {
-//        client.invokeMethod(named: <#T##String#>, parameters: <#T##[Any]?#>, success: <#T##(() -> JSClient.T)?##(() -> JSClient.T)?##() -> JSClient.T#>, failure: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+    public func newUser(name: String, password: String, completion: @escaping (Result<JSUser, Error>) -> Void) {
+        client.invokeMethod(named: "JSDispatcherModule.newUser", parameters: nil, completion: completion)
     }
     
-    public func deleteUser(id: Int) {
-//        client.invokeMethod(named: <#T##String#>, parameters: <#T##[Any]?#>, success: <#T##(() -> JSClient.T)?##(() -> JSClient.T)?##() -> JSClient.T#>, failure: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+    public func deleteUser(id: Int, completion: @escaping (Result<Void, Error>) -> Void ) {
+        client.invokeMethod(named: "JSDispatcherModule.deleteUser", parameters: nil, completion: completion)
     }
 }

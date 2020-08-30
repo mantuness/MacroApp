@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		512317EA24F4286B003AE4AB /* MyAccountNonDiCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */; };
 		51C0AB9524F7A410003B1C98 /* SettingsNonDIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */; };
+		707408BA24F95AF100E72281 /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707408B924F95AF100E72281 /* JSError.swift */; };
 		708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; };
 		708563FE24E1AB3B0014A62F /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708563FF24E1ABE50014A62F /* SettingsViewModel.swift */; };
@@ -207,6 +208,7 @@
 		512317E524F426A1003AE4AB /* SettingsNonDIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIViewModel.swift; sourceTree = "<group>"; };
 		512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIFactory.swift; sourceTree = "<group>"; };
 		512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountNonDiCoordinator.swift; sourceTree = "<group>"; };
+		707408B924F95AF100E72281 /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
 		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		708563FC24E1AB3B0014A62F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		708563FF24E1ABE50014A62F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 				70C0065C24E148D20036AFAB /* JSConfigs.swift */,
 				70C0065D24E148D20036AFAB /* JSUser.swift */,
 				7085642924E216E40014A62F /* JSFeatureFlags.swift */,
+				707408B924F95AF100E72281 /* JSError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1114,6 +1117,7 @@
 				70C0066824E148D20036AFAB /* XMLHTTPRequest.m in Sources */,
 				70C0066324E148D20036AFAB /* JSClient.swift in Sources */,
 				70C0066524E148D20036AFAB /* JSUser.swift in Sources */,
+				707408BA24F95AF100E72281 /* JSError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
