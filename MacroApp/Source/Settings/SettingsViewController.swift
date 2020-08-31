@@ -8,9 +8,9 @@ protocol SettingsViewControllerDelegate: class {
 
 final class SettingsViewController: UIViewController {
     private weak var delegate: SettingsViewControllerDelegate?
-    private let viewModel: SettingsViewModel
-    init(viewModel: SettingsViewModel, delegate: SettingsViewControllerDelegate) {
-        self.viewModel = viewModel
+    private let viewModel: SettingsViewModel = .init()
+    
+    init(delegate: SettingsViewControllerDelegate) {
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
@@ -60,11 +60,7 @@ final class SettingsViewController: UIViewController {
 }
 
 final class SettingsViewControllerFactory {
-    private let viewModelProvider: Provider<SettingsViewModel>
-    init(viewModelProvider: Provider<SettingsViewModel>) {
-        self.viewModelProvider = viewModelProvider
-    }
     func create(delegate: SettingsViewControllerDelegate) -> SettingsViewController {
-        return SettingsViewController(viewModel: viewModelProvider.instance, delegate: delegate)
+        return SettingsViewController(delegate: delegate)
     }
 }

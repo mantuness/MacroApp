@@ -8,23 +8,18 @@ final class MyAccountNonDiCoordinator: Coordinator {
     private var navigationVC: UINavigationController?
     
     private let settingsViewControllerFactory: SettingsNonDIViewControllerFactory
-    private let settingsViewModel: SettingsViewModel
     private let anchorVC: UIViewController
     
     init(settingsViewControllerFactory: SettingsNonDIViewControllerFactory,
-         settingsViewModel: SettingsViewModel,
          delegate: CoordinatorDelegate,
          anchorVC: UIViewController) {
         self.settingsViewControllerFactory = settingsViewControllerFactory
-        self.settingsViewModel = settingsViewModel
         self.delegate = delegate
         self.anchorVC = anchorVC
     }
     
     func execute() {
-        
-        
-        let settingsVC = settingsViewControllerFactory.create(viewModel: settingsViewModel, delegate: self)
+        let settingsVC = settingsViewControllerFactory.create(delegate: self)
         navigationVC = UINavigationController(rootViewController: settingsVC)
         navigationVC?.modalPresentationStyle = .fullScreen
         anchorVC.present(navigationVC!, animated: false, completion: nil)
@@ -63,7 +58,6 @@ final class MyAccountNonDICoordinatorFactory {
     func create(anchorVC: UIViewController, coordinatorDelegate: CoordinatorDelegate) -> MyAccountNonDiCoordinator {
         return MyAccountNonDiCoordinator(
             settingsViewControllerFactory: settingsViewControllerFactory.self,
-            settingsViewModel: settingsViewModel,
             delegate: coordinatorDelegate,
             anchorVC: anchorVC
         )

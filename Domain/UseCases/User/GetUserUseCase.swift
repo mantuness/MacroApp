@@ -1,16 +1,27 @@
 import Foundation
 
-public final class GetUserUseCase: UseCase {
+public struct GetUserUseCase: UseCase {
     public struct Input {
+        public let userRepository: UserRepository
         public let id: Int
         public let completion: (Result<User, Error>) -> Void
     }
-    private let userRepository: UserRepository
-    public init(userRepository: UserRepository) {
-        self.userRepository = userRepository
+
+    public var execute: (Input) -> Void = { input in
+        input.userRepository.getUser(id: input.id, completion: input.completion)
     }
     
-    public func execute(input: Input) -> Void {
-        return userRepository.getUser(id: input.id, completion: input.completion)
+    public init() {
+        
+    }
+    
+    internal init(execute: @escaping (Input) -> Void) {
+        self.execute = execute
+    }
+}
+
+extension GetUserUseCase {
+    public static let mock: Self = .init { (input) in
+        input.completion(.success(.init(id: input.id, name: "user name")))
     }
 }

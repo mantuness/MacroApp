@@ -8,8 +8,8 @@ protocol UserViewControllerDelegate: class {
 final class UserViewController: UIViewController {
     private weak var delegate: UserViewControllerDelegate?
     private let viewModel: UserViewModel
-    init(viewModel: UserViewModel, delegate: UserViewControllerDelegate) {
-        self.viewModel = viewModel
+    init(id: Int, delegate: UserViewControllerDelegate) {
+        self.viewModel = .init(id: id)
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,6 +36,6 @@ final class UserViewControllerFactory {
         self.viewModelFactory = viewModelFactory
     }
     func create(id: Int, delegate: UserViewControllerDelegate) -> UserViewController {
-        return UserViewController(viewModel: viewModelFactory.create(id: id), delegate: delegate)
+        return UserViewController(id: id, delegate: delegate)
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		512317EA24F4286B003AE4AB /* MyAccountNonDiCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */; };
 		51C0AB9524F7A410003B1C98 /* SettingsNonDIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */; };
+		51C0ABA024FBF8D8003B1C98 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0AB9F24FBF8D8003B1C98 /* Environment.swift */; };
 		707408BA24F95AF100E72281 /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707408B924F95AF100E72281 /* JSError.swift */; };
 		708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; };
 		708563FE24E1AB3B0014A62F /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -29,19 +30,11 @@
 		7085642824E213840014A62F /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642724E213840014A62F /* AppService.swift */; };
 		7085642A24E216E40014A62F /* JSFeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642924E216E40014A62F /* JSFeatureFlags.swift */; };
 		7085642C24E218630014A62F /* ConfigsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642B24E218630014A62F /* ConfigsMapper.swift */; };
-		7085642E24E21C470014A62F /* AppRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642D24E21C470014A62F /* AppRepositoryImpl.swift */; };
+		7085642E24E21C470014A62F /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642D24E21C470014A62F /* AppRepository.swift */; };
 		7085643024E21D4B0014A62F /* FeatureFlagsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085642F24E21D4B0014A62F /* FeatureFlagsMapper.swift */; };
 		7085643424E2AA600014A62F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085643324E2AA600014A62F /* Coordinator.swift */; };
 		7085643624E2E5920014A62F /* MyAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085643524E2E5920014A62F /* MyAccountCoordinator.swift */; };
 		7085643924E2FA6B0014A62F /* ValidateUserIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085643824E2FA6B0014A62F /* ValidateUserIdUseCase.swift */; };
-		7085643B24E2FD520014A62F /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085643A24E2FD520014A62F /* Application.swift */; };
-		7085643F24E34E7D0014A62F /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085643E24E34E7D0014A62F /* ViewModelAssembly.swift */; };
-		7085644124E3515B0014A62F /* UseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085644024E3515B0014A62F /* UseCaseAssembly.swift */; };
-		7085644324E352D30014A62F /* RepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085644224E352D30014A62F /* RepositoryAssembly.swift */; };
-		7085644524E354840014A62F /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085644424E354840014A62F /* ServicesAssembly.swift */; };
-		7085644724E3566E0014A62F /* ClientAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085644624E3566E0014A62F /* ClientAssembly.swift */; };
-		7085644924E3586F0014A62F /* CoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085644824E3586F0014A62F /* CoordinatorAssembly.swift */; };
-		7085644B24E35A120014A62F /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085644A24E35A120014A62F /* ViewControllerAssembly.swift */; };
 		7089B6A924DCA939009E6BEE /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6A824DCA939009E6BEE /* Configs.swift */; };
 		7089B6CF24DD4ACF009E6BEE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7089B6C624DD4ACF009E6BEE /* Data.framework */; };
 		7089B6D624DD4ACF009E6BEE /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6D524DD4ACF009E6BEE /* DataTests.swift */; };
@@ -57,7 +50,7 @@
 		70C0062224E13BDC0036AFAB /* CreateUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062124E13BDC0036AFAB /* CreateUserUseCase.swift */; };
 		70C0062524E13C1C0036AFAB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062424E13C1C0036AFAB /* UserRepository.swift */; };
 		70C0062724E13C410036AFAB /* DeleteUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062624E13C410036AFAB /* DeleteUserUseCase.swift */; };
-		70C0062B24E13D760036AFAB /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062A24E13D760036AFAB /* UserRepositoryImpl.swift */; };
+		70C0062B24E13D760036AFAB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062A24E13D760036AFAB /* UserRepository.swift */; };
 		70C0062E24E146490036AFAB /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062D24E146490036AFAB /* UserMapper.swift */; };
 		70C0063D24E1486B0036AFAB /* JSPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; };
 		70C0064424E1486B0036AFAB /* JSPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0064324E1486B0036AFAB /* JSPlatformTests.swift */; };
@@ -208,6 +201,7 @@
 		512317E524F426A1003AE4AB /* SettingsNonDIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIViewModel.swift; sourceTree = "<group>"; };
 		512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIFactory.swift; sourceTree = "<group>"; };
 		512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountNonDiCoordinator.swift; sourceTree = "<group>"; };
+		51C0AB9F24FBF8D8003B1C98 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		707408B924F95AF100E72281 /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
 		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		708563FC24E1AB3B0014A62F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
@@ -228,19 +222,11 @@
 		7085642724E213840014A62F /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		7085642924E216E40014A62F /* JSFeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSFeatureFlags.swift; sourceTree = "<group>"; };
 		7085642B24E218630014A62F /* ConfigsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigsMapper.swift; sourceTree = "<group>"; };
-		7085642D24E21C470014A62F /* AppRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepositoryImpl.swift; sourceTree = "<group>"; };
+		7085642D24E21C470014A62F /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
 		7085642F24E21D4B0014A62F /* FeatureFlagsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlagsMapper.swift; sourceTree = "<group>"; };
 		7085643324E2AA600014A62F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7085643524E2E5920014A62F /* MyAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountCoordinator.swift; sourceTree = "<group>"; };
 		7085643824E2FA6B0014A62F /* ValidateUserIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserIdUseCase.swift; sourceTree = "<group>"; };
-		7085643A24E2FD520014A62F /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		7085643E24E34E7D0014A62F /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
-		7085644024E3515B0014A62F /* UseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseAssembly.swift; sourceTree = "<group>"; };
-		7085644224E352D30014A62F /* RepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAssembly.swift; sourceTree = "<group>"; };
-		7085644424E354840014A62F /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
-		7085644624E3566E0014A62F /* ClientAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAssembly.swift; sourceTree = "<group>"; };
-		7085644824E3586F0014A62F /* CoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAssembly.swift; sourceTree = "<group>"; };
-		7085644A24E35A120014A62F /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
 		7089B6A124DC0461009E6BEE /* base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = base.xcconfig; sourceTree = "<group>"; };
 		7089B6A824DCA939009E6BEE /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		7089B6C624DD4ACF009E6BEE /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,7 +242,7 @@
 		70C0062124E13BDC0036AFAB /* CreateUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserUseCase.swift; sourceTree = "<group>"; };
 		70C0062424E13C1C0036AFAB /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		70C0062624E13C410036AFAB /* DeleteUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserUseCase.swift; sourceTree = "<group>"; };
-		70C0062A24E13D760036AFAB /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
+		70C0062A24E13D760036AFAB /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		70C0062D24E146490036AFAB /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
 		70C0063424E1486B0036AFAB /* JSPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C0063624E1486B0036AFAB /* JSPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPlatform.h; sourceTree = "<group>"; };
@@ -376,6 +362,14 @@
 			path = "Settings Non Di";
 			sourceTree = "<group>";
 		};
+		51C0AB9E24FBF8C4003B1C98 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				51C0AB9F24FBF8D8003B1C98 /* Environment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		7085640524E1B3F80014A62F /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,29 +437,6 @@
 				7085643524E2E5920014A62F /* MyAccountCoordinator.swift */,
 			);
 			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		7085643C24E34E410014A62F /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				7085643A24E2FD520014A62F /* Application.swift */,
-				7085643D24E34E4B0014A62F /* Assemblies */,
-			);
-			path = DI;
-			sourceTree = "<group>";
-		};
-		7085643D24E34E4B0014A62F /* Assemblies */ = {
-			isa = PBXGroup;
-			children = (
-				7085643E24E34E7D0014A62F /* ViewModelAssembly.swift */,
-				7085644024E3515B0014A62F /* UseCaseAssembly.swift */,
-				7085644224E352D30014A62F /* RepositoryAssembly.swift */,
-				7085644424E354840014A62F /* ServicesAssembly.swift */,
-				7085644624E3566E0014A62F /* ClientAssembly.swift */,
-				7085644824E3586F0014A62F /* CoordinatorAssembly.swift */,
-				7085644A24E35A120014A62F /* ViewControllerAssembly.swift */,
-			);
-			path = Assemblies;
 			sourceTree = "<group>";
 		};
 		7089B6A224DC0484009E6BEE /* prd */ = {
@@ -549,6 +520,7 @@
 				7085641424E201200014A62F /* User */,
 				7085641724E206090014A62F /* Config */,
 				7085642224E212550014A62F /* FeatureFlag */,
+				70C0062324E13C060036AFAB /* Repositories */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -565,8 +537,8 @@
 		70C0062924E13D5D0036AFAB /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				70C0062A24E13D760036AFAB /* UserRepositoryImpl.swift */,
-				7085642D24E21C470014A62F /* AppRepositoryImpl.swift */,
+				70C0062A24E13D760036AFAB /* UserRepository.swift */,
+				7085642D24E21C470014A62F /* AppRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -585,6 +557,7 @@
 		70C0063524E1486B0036AFAB /* JSPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				51C0AB9E24FBF8C4003B1C98 /* Environment */,
 				70C0066E24E14D0D0036AFAB /* API */,
 				70C0065B24E148D20036AFAB /* Models */,
 				70C0065924E148D20036AFAB /* Client */,
@@ -655,7 +628,6 @@
 			isa = PBXGroup;
 			children = (
 				70C0062024E13BCC0036AFAB /* UseCases */,
-				70C0062324E13C060036AFAB /* Repositories */,
 				7089B6A724DCA924009E6BEE /* Models */,
 				70C68F7624D456520009DFC6 /* Domain.h */,
 				70C68F7724D456520009DFC6 /* Info.plist */,
@@ -709,7 +681,6 @@
 			children = (
 				70F6477D24BDB2500081A3F6 /* AppDelegate.swift */,
 				70F6477F24BDB2500081A3F6 /* SceneDelegate.swift */,
-				7085643C24E34E410014A62F /* DI */,
 				70F6479F24BDB3150081A3F6 /* Source */,
 				70F647A124BDB36A0081A3F6 /* Resources */,
 				70F647A224BDB3960081A3F6 /* SupportingFiles */,
@@ -1089,8 +1060,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7085643024E21D4B0014A62F /* FeatureFlagsMapper.swift in Sources */,
-				70C0062B24E13D760036AFAB /* UserRepositoryImpl.swift in Sources */,
-				7085642E24E21C470014A62F /* AppRepositoryImpl.swift in Sources */,
+				70C0062B24E13D760036AFAB /* UserRepository.swift in Sources */,
+				7085642E24E21C470014A62F /* AppRepository.swift in Sources */,
 				70C0062E24E146490036AFAB /* UserMapper.swift in Sources */,
 				7085642C24E218630014A62F /* ConfigsMapper.swift in Sources */,
 				7089B70424DD4B87009E6BEE /* JSRepresentable.swift in Sources */,
@@ -1114,6 +1085,7 @@
 				7085642A24E216E40014A62F /* JSFeatureFlags.swift in Sources */,
 				7085642824E213840014A62F /* AppService.swift in Sources */,
 				70C0067024E14D2E0036AFAB /* UserService.swift in Sources */,
+				51C0ABA024FBF8D8003B1C98 /* Environment.swift in Sources */,
 				70C0066824E148D20036AFAB /* XMLHTTPRequest.m in Sources */,
 				70C0066324E148D20036AFAB /* JSClient.swift in Sources */,
 				70C0066524E148D20036AFAB /* JSUser.swift in Sources */,
@@ -1162,19 +1134,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				512317EA24F4286B003AE4AB /* MyAccountNonDiCoordinator.swift in Sources */,
-				7085644B24E35A120014A62F /* ViewControllerAssembly.swift in Sources */,
-				7085643B24E2FD520014A62F /* Application.swift in Sources */,
 				7085640224E1B0250014A62F /* AppCoordinator.swift in Sources */,
-				7085643F24E34E7D0014A62F /* ViewModelAssembly.swift in Sources */,
 				7085640E24E1FE750014A62F /* InitialViewController.swift in Sources */,
-				7085644324E352D30014A62F /* RepositoryAssembly.swift in Sources */,
-				7085644524E354840014A62F /* ServicesAssembly.swift in Sources */,
-				7085644924E3586F0014A62F /* CoordinatorAssembly.swift in Sources */,
 				7085643424E2AA600014A62F /* Coordinator.swift in Sources */,
 				70F6478224BDB2500081A3F6 /* SettingsViewController.swift in Sources */,
-				7085644724E3566E0014A62F /* ClientAssembly.swift in Sources */,
 				70F6477E24BDB2500081A3F6 /* AppDelegate.swift in Sources */,
-				7085644124E3515B0014A62F /* UseCaseAssembly.swift in Sources */,
 				70F6478024BDB2500081A3F6 /* SceneDelegate.swift in Sources */,
 				7085643624E2E5920014A62F /* MyAccountCoordinator.swift in Sources */,
 				7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */,

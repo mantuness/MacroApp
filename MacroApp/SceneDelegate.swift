@@ -14,8 +14,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        let appCoordinatorFactory = Application.shared.resolve(AppCoordinatorFactory.self)
-        appCoordinator = appCoordinatorFactory.create(window: window, coordinatorDelegate: self)
+        let factory = AppCoordinatorFactory(
+            initialViewControllerFactory: .init(),
+            myAccountCoordinatorFactory: .init(
+                userViewControllerFactory: .init(viewModelFactory: .init()),
+                settingsViewControllerFactory: .init()
+            )
+        )
+        
+        appCoordinator = factory.create(window: window, coordinatorDelegate: self)
+    
         appCoordinator?.execute()
     }
     

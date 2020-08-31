@@ -1,18 +1,38 @@
 import Foundation
 
-public final class GetConfigsUseCase: UseCase {
+public struct GetConfigsUseCase: UseCase {
     public struct Input {
+        public let appRepository: AppRepository
         public let completion: (Result<Configs, Error>) -> Void
-        public init(completion: @escaping (Result<Configs, Error>) -> Void) {
+        public init(appRepository: AppRepository, completion: @escaping (Result<Configs, Error>) -> Void) {
+            self.appRepository = appRepository
             self.completion = completion
         }
     }
-    private let appRepository: AppRepository
-    public init(appRepository: AppRepository) {
-        self.appRepository = appRepository
+    
+    public var execute: (Input) -> Configs? = { input in
+        return input.appRepository.getConfigs(completion: input.completion)
     }
     
-    public func execute(input: Input) -> Configs? {
-        return appRepository.getConfigs(completion: input.completion)
+    public init() {
+        
+    }
+    
+    internal init(execute: @escaping (Input) -> Configs?) {
+        self.execute = execute
+    }
+}
+
+extension GetConfigsUseCase {
+    public static let mock: Self = .init { input -> Configs? in
+        input.completion(
+            .success(
+                .init(
+                    rottenTomatoesFreshMinimumValue: 0,
+                    spsEndpointHost: URL(string: "http://www.valid-url.com")!
+                )
+            )
+        )
+        return nil
     }
 }

@@ -3,38 +3,40 @@ import Domain
 import Swinject
 
 final class InitialViewModel {
-    private let getConfigsUseCase: GetConfigsUseCase
-    private let getFFUseCase: GetFeatureFlagsUseCase
-    init(getConfigsUseCase: GetConfigsUseCase,
-         getFFUseCase: GetFeatureFlagsUseCase) {
-        self.getConfigsUseCase = getConfigsUseCase
-        self.getFFUseCase = getFFUseCase
-    }
-    
     func bootstrap() {
         getConfigs()
         getFeatureFlags()
     }
     
     private func getConfigs() {
-        let inputForConfigs = GetConfigsUseCase.Input(completion: { result in
-            if case .success(let configs) = result {
-                print("Success with configs \(configs)")
-            } else {
-                print("Shit happens")
+        let inputForConfigs = GetConfigsUseCase.Input(
+            appRepository: Current.appRepository,
+            completion: { result in
+                if case .success(let configs) = result {
+                    print("Success with configs \(configs)")
+                } else {
+                    print("Shit happens")
+                }
             }
-        })
-        _ = getConfigsUseCase.execute(input: inputForConfigs)
+        )
+        _ = GetConfigsUseCase().execute(inputForConfigs)
     }
     
     private func getFeatureFlags() {
-        let inputForFF = GetFeatureFlagsUseCase.Input(completion: { result in
-            if case .success(let ff) = result {
-                print("Success with feature flags \(ff)")
-            } else {
-                print("Shit happens")
+        let inputForFF = GetFeatureFlagsUseCase.Input(
+            appRepository: Current.appRepository,
+            completion: { result in
+                if case .success(let ff) = result {
+                    print("Success with feature flags \(ff)")
+                } else {
+                    print("Shit happens")
+                }
             }
-        })
-        _ = getFFUseCase.execute(input: inputForFF)
+        )
+        _ = GetFeatureFlagsUseCase().execute(inputForFF)
     }
+}
+
+extension InitialViewModel {
+    static var mock: InitialViewModel = .init()
 }

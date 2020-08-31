@@ -1,5 +1,5 @@
 import UIKit
-import Swinject
+import JSPlatform
 
 protocol InitialViewControllerDelegate: class {
     func didTapSettingsButton()
@@ -9,9 +9,9 @@ protocol InitialViewControllerDelegate: class {
 
 final class InitialViewController: UIViewController {
     private weak var delegate: InitialViewControllerDelegate?
-    private let viewModel: InitialViewModel
-    init(viewModel: InitialViewModel, delegate: InitialViewControllerDelegate) {
-        self.viewModel = viewModel
+    private let viewModel: InitialViewModel = .init()
+    
+    init(delegate: InitialViewControllerDelegate) {
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
@@ -38,12 +38,17 @@ final class InitialViewController: UIViewController {
     }
 }
 
-final class InitialViewControllerFactory {
-    private let viewModelProvider: Provider<InitialViewModel>
-    init(viewModelProvider: Provider<InitialViewModel>) {
-        self.viewModelProvider = viewModelProvider
-    }
-    func create(delegate: InitialViewControllerDelegate) -> InitialViewController {
-        return InitialViewController(viewModel: viewModelProvider.instance, delegate: delegate)
+struct InitialViewControllerFactory {
+    var create: (InitialViewControllerDelegate) -> InitialViewController = { delegate in
+        .init(delegate: delegate) // i'm not really a fan of this one as well
     }
 }
+
+extension InitialViewControllerFactory {
+    static var mock = InitialViewControllerFactory(
+        create: { delegate in
+            .init(delegate: delegate)
+        }
+    )
+}
+
