@@ -24,7 +24,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="yq1-ae-Dys">
-                    <rect key="frame" x="98.5" y="392" width="217" height="112"/>
+                    <rect key="frame" x="98.5" y="412.5" width="217" height="71"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXj-7l-X8G">
                             <rect key="frame" x="60" y="0.0" width="97" height="30"/>
@@ -33,15 +33,8 @@
                                 <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="84G-JM-sel"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qm-qs-QjZ">
-                            <rect key="frame" x="36" y="41" width="145" height="30"/>
-                            <state key="normal" title="Go to settings non DI"/>
-                            <connections>
-                                <action selector="didTapSettingsNonDIButton:" destination="-1" eventType="touchUpInside" id="7pj-gc-vhH"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJg-Dz-Ojb">
-                            <rect key="frame" x="0.0" y="82" width="217" height="30"/>
+                            <rect key="frame" x="0.0" y="41" width="217" height="30"/>
                             <state key="normal" title="Go to settings - Current pattern"/>
                             <connections>
                                 <action selector="didTapSettingsCurrentPatternButton:" destination="-1" eventType="touchUpInside" id="sVM-iB-m7M"/>

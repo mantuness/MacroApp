@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		512317EA24F4286B003AE4AB /* MyAccountNonDiCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */; };
-		51C0AB9524F7A410003B1C98 /* SettingsNonDIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */; };
+		5139840924FD67F3000579C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840824FD67F3000579C9 /* Environment.swift */; };
 		51C0ABA024FBF8D8003B1C98 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0AB9F24FBF8D8003B1C98 /* Environment.swift */; };
 		707408BA24F95AF100E72281 /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707408B924F95AF100E72281 /* JSError.swift */; };
 		708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; };
@@ -197,10 +196,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		512317E324F42691003AE4AB /* SettingsNonDIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIViewController.swift; sourceTree = "<group>"; };
-		512317E524F426A1003AE4AB /* SettingsNonDIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIViewModel.swift; sourceTree = "<group>"; };
-		512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNonDIFactory.swift; sourceTree = "<group>"; };
-		512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountNonDiCoordinator.swift; sourceTree = "<group>"; };
+		5139840824FD67F3000579C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		51C0AB9F24FBF8D8003B1C98 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		707408B924F95AF100E72281 /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
 		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -352,16 +348,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		512317E224F4267A003AE4AB /* Settings Non Di */ = {
-			isa = PBXGroup;
-			children = (
-				512317E524F426A1003AE4AB /* SettingsNonDIViewModel.swift */,
-				512317E724F426B6003AE4AB /* SettingsNonDIFactory.swift */,
-				512317E324F42691003AE4AB /* SettingsNonDIViewController.swift */,
-			);
-			path = "Settings Non Di";
-			sourceTree = "<group>";
-		};
 		51C0AB9E24FBF8C4003B1C98 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,8 +419,8 @@
 			children = (
 				7085643324E2AA600014A62F /* Coordinator.swift */,
 				7085640124E1B0250014A62F /* AppCoordinator.swift */,
-				512317E924F4286B003AE4AB /* MyAccountNonDiCoordinator.swift */,
 				7085643524E2E5920014A62F /* MyAccountCoordinator.swift */,
+				5139840824FD67F3000579C9 /* Environment.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -702,7 +688,6 @@
 			children = (
 				7085643724E2F9610014A62F /* Coordinators */,
 				7085640B24E1FE530014A62F /* Initial */,
-				512317E224F4267A003AE4AB /* Settings Non Di */,
 				7085640524E1B3F80014A62F /* Settings */,
 				7085640624E1B7610014A62F /* User */,
 			);
@@ -1133,9 +1118,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				512317EA24F4286B003AE4AB /* MyAccountNonDiCoordinator.swift in Sources */,
 				7085640224E1B0250014A62F /* AppCoordinator.swift in Sources */,
 				7085640E24E1FE750014A62F /* InitialViewController.swift in Sources */,
+				5139840924FD67F3000579C9 /* Environment.swift in Sources */,
 				7085643424E2AA600014A62F /* Coordinator.swift in Sources */,
 				70F6478224BDB2500081A3F6 /* SettingsViewController.swift in Sources */,
 				70F6477E24BDB2500081A3F6 /* AppDelegate.swift in Sources */,
@@ -1144,7 +1129,6 @@
 				7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */,
 				7085640924E1B79B0014A62F /* UserViewController.swift in Sources */,
 				7085641324E1FF3F0014A62F /* UserViewModel.swift in Sources */,
-				51C0AB9524F7A410003B1C98 /* SettingsNonDIFactory.swift in Sources */,
 				7085641124E1FEB30014A62F /* InitialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

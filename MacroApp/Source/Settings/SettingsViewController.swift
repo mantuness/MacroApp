@@ -59,8 +59,20 @@ final class SettingsViewController: UIViewController {
     }
 }
 
-final class SettingsViewControllerFactory {
-    func create(delegate: SettingsViewControllerDelegate) -> SettingsViewController {
-        return SettingsViewController(delegate: delegate)
+extension SettingsViewController {
+    static let mock: SettingsViewController = .init(delegate: MockSettingsViewController())
+    
+    // this shouldn't be here move to tests
+    class MockSettingsViewController: SettingsViewControllerDelegate {
+        var didCallPressUserButton = false
+        var didCallTapClose = false
+        
+        func didPressUserButton(userId: Int) {
+            didCallPressUserButton = true
+        }
+        
+        func didTapClose() {
+            didCallTapClose = true
+        }
     }
 }

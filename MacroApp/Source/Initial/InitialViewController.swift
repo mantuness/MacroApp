@@ -3,7 +3,6 @@ import JSPlatform
 
 protocol InitialViewControllerDelegate: class {
     func didTapSettingsButton()
-    func didTapSettingsNonDIButton()
     func didTapSettingsCurrentPatternButton()
 }
 
@@ -28,27 +27,27 @@ final class InitialViewController: UIViewController {
     @IBAction func didTapButton(_ sender: UIButton) {
         delegate?.didTapSettingsButton()
     }
-    
-    @IBAction func didTapSettingsNonDIButton(_ sender: UIButton) {
-        delegate?.didTapSettingsNonDIButton()
-    }
-    
+
     @IBAction func didTapSettingsCurrentPatternButton(_ sender: UIButton) {
+        delegate?.didTapSettingsCurrentPatternButton()
+    }
+}
+
+extension InitialViewController {
+    static let mock: InitialViewController = .init(delegate: MockInitialViewControllerDelegate())
+    
+    // this shouldn't be here move to tests
+    class MockInitialViewControllerDelegate: InitialViewControllerDelegate {
+        var didCallTappSettingsButton = false
+        var didCallTapSettingsCurrentPatternButton = false
         
-    }
-}
-
-struct InitialViewControllerFactory {
-    var create: (InitialViewControllerDelegate) -> InitialViewController = { delegate in
-        .init(delegate: delegate) // i'm not really a fan of this one as well
-    }
-}
-
-extension InitialViewControllerFactory {
-    static var mock = InitialViewControllerFactory(
-        create: { delegate in
-            .init(delegate: delegate)
+        func didTapSettingsButton() {
+            didCallTappSettingsButton = true
         }
-    )
+        
+        func didTapSettingsCurrentPatternButton() {
+            didCallTapSettingsCurrentPatternButton = true
+        }
+    }
 }
 

@@ -7,22 +7,14 @@ final class MyAccountCoordinator: Coordinator {
     
     private var navigationVC: UINavigationController?
     
-    private let userViewControllerFactory: UserViewControllerFactory
-    private let settingsViewControllerFactory: SettingsViewControllerFactory
     private let anchorVC: UIViewController
-    init(userViewControllerFactory: UserViewControllerFactory,
-         settingsViewControllerFactory: SettingsViewControllerFactory,
-         delegate: CoordinatorDelegate,
-         anchorVC: UIViewController) {
-        self.userViewControllerFactory = userViewControllerFactory
-        self.settingsViewControllerFactory = settingsViewControllerFactory
+    init(delegate: CoordinatorDelegate, anchorVC: UIViewController) {
         self.delegate = delegate
         self.anchorVC = anchorVC
     }
     
     func execute() {
-        let settingsVC = settingsViewControllerFactory.create(delegate: self)
-        navigationVC = UINavigationController(rootViewController: settingsVC)
+        navigationVC = UINavigationController(rootViewController: SettingsViewController(delegate: self))
         navigationVC?.modalPresentationStyle = .fullScreen
         anchorVC.present(navigationVC!, animated: false, completion: nil)
     }
@@ -31,7 +23,7 @@ final class MyAccountCoordinator: Coordinator {
 // MARK: - SettingsViewControllerDelegate
 extension MyAccountCoordinator: SettingsViewControllerDelegate {
     func didPressUserButton(userId: Int) {
-        let userVC = userViewControllerFactory.create(id: userId, delegate: self)
+        let userVC = UserViewController(id: userId, delegate: self)
         navigationVC?.pushViewController(userVC, animated: true)
     }
     
@@ -50,17 +42,10 @@ extension MyAccountCoordinator: UserViewControllerDelegate {
 }
 
 final class MyAccountCoordinatorFactory {
-    private let userViewControllerFactory: UserViewControllerFactory
-    private let settingsViewControllerFactory: SettingsViewControllerFactory
-    init(userViewControllerFactory: UserViewControllerFactory, settingsViewControllerFactory: SettingsViewControllerFactory) {
-        self.userViewControllerFactory = userViewControllerFactory
-        self.settingsViewControllerFactory = settingsViewControllerFactory
-    }
-    
     func create(anchorVC: UIViewController, coordinatorDelegate: CoordinatorDelegate) -> MyAccountCoordinator {
-        return MyAccountCoordinator(userViewControllerFactory: userViewControllerFactory,
-                                    settingsViewControllerFactory: settingsViewControllerFactory,
-                                    delegate: coordinatorDelegate,
-                                    anchorVC: anchorVC)
+        return MyAccountCoordinator(
+            delegate: coordinatorDelegate,
+            anchorVC: anchorVC
+        )
     }
 }

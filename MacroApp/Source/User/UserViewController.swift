@@ -30,12 +30,14 @@ final class UserViewController: UIViewController {
     }
 }
 
-final class UserViewControllerFactory {
-    private let viewModelFactory: UserViewModelFactory
-    init(viewModelFactory: UserViewModelFactory) {
-        self.viewModelFactory = viewModelFactory
-    }
-    func create(id: Int, delegate: UserViewControllerDelegate) -> UserViewController {
-        return UserViewController(id: id, delegate: delegate)
+extension UserViewController {
+    static let mock: UserViewController = .init(id: 30, delegate: MockUserViewControllerDelegate())
+    
+    class MockUserViewControllerDelegate: UserViewControllerDelegate {
+        var didCallGoBack = false
+        
+        func goBack() {
+            didCallGoBack = true
+        }
     }
 }
