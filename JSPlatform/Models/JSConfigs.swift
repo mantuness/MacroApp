@@ -1,6 +1,6 @@
 import Foundation
 
-public struct JSConfigs: Codable {
+public struct JSConfigs: Codable, Equatable {
     public let rottenTomatoesFreshMinimumValue: String?
     public let spsEndpointHost: String?
     

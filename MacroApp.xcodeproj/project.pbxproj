@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512ACC632501955C0006C6E1 /* JSUser+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC622501955B0006C6E1 /* JSUser+Mock.swift */; };
+		512ACC652501958D0006C6E1 /* UserService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC642501958D0006C6E1 /* UserService+Mock.swift */; };
+		512ACC67250195D90006C6E1 /* JSError+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC66250195D90006C6E1 /* JSError+Mock.swift */; };
+		512ACC69250195F70006C6E1 /* NSError+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC68250195F70006C6E1 /* NSError+Mock.swift */; };
+		512ACC6B250196280006C6E1 /* JSConfigs+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC6A250196280006C6E1 /* JSConfigs+Mock.swift */; };
+		512ACC6D250196440006C6E1 /* JSFeatureFlags+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC6C250196440006C6E1 /* JSFeatureFlags+Mock.swift */; };
+		512ACC71250196750006C6E1 /* AppService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC70250196750006C6E1 /* AppService+Mock.swift */; };
+		512ACC732501970D0006C6E1 /* JSContext+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC722501970D0006C6E1 /* JSContext+Mock.swift */; };
+		512ACC75250197A70006C6E1 /* Encodable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC74250197A70006C6E1 /* Encodable+Utils.swift */; };
+		512ACC7825019D5A0006C6E1 /* UserRepository+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC7725019D5A0006C6E1 /* UserRepository+Mock.swift */; };
+		512ACC7D2501A7880006C6E1 /* AppRepository+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC7C2501A7540006C6E1 /* AppRepository+Mock.swift */; };
+		512ACC7E2501A78C0006C6E1 /* AppRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC7B2501A7360006C6E1 /* AppRepositoryTests.swift */; };
 		5139840924FD67F3000579C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840824FD67F3000579C9 /* Environment.swift */; };
+		5139841024FE3EE4000579C9 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840F24FE3EE3000579C9 /* UserServiceTests.swift */; };
+		5139841224FE45E8000579C9 /* JSClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139841124FE45E8000579C9 /* JSClientTests.swift */; };
 		51C0ABA024FBF8D8003B1C98 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0AB9F24FBF8D8003B1C98 /* Environment.swift */; };
 		707408BA24F95AF100E72281 /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707408B924F95AF100E72281 /* JSError.swift */; };
 		708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; };
@@ -36,7 +50,7 @@
 		7085643924E2FA6B0014A62F /* ValidateUserIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085643824E2FA6B0014A62F /* ValidateUserIdUseCase.swift */; };
 		7089B6A924DCA939009E6BEE /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6A824DCA939009E6BEE /* Configs.swift */; };
 		7089B6CF24DD4ACF009E6BEE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7089B6C624DD4ACF009E6BEE /* Data.framework */; };
-		7089B6D624DD4ACF009E6BEE /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6D524DD4ACF009E6BEE /* DataTests.swift */; };
+		7089B6D624DD4ACF009E6BEE /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6D524DD4ACF009E6BEE /* UserRepositoryTests.swift */; };
 		7089B6D824DD4ACF009E6BEE /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 7089B6C824DD4ACF009E6BEE /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7089B6DB24DD4ACF009E6BEE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7089B6C624DD4ACF009E6BEE /* Data.framework */; };
 		7089B6DC24DD4ACF009E6BEE /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7089B6C624DD4ACF009E6BEE /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -52,7 +66,7 @@
 		70C0062B24E13D760036AFAB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062A24E13D760036AFAB /* UserRepository.swift */; };
 		70C0062E24E146490036AFAB /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062D24E146490036AFAB /* UserMapper.swift */; };
 		70C0063D24E1486B0036AFAB /* JSPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; };
-		70C0064424E1486B0036AFAB /* JSPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0064324E1486B0036AFAB /* JSPlatformTests.swift */; };
+		70C0064424E1486B0036AFAB /* AppServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0064324E1486B0036AFAB /* AppServiceTests.swift */; };
 		70C0064624E1486B0036AFAB /* JSPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C0063624E1486B0036AFAB /* JSPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70C0064924E1486B0036AFAB /* JSPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; };
 		70C0064A24E1486B0036AFAB /* JSPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -196,7 +210,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		512ACC622501955B0006C6E1 /* JSUser+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSUser+Mock.swift"; sourceTree = "<group>"; };
+		512ACC642501958D0006C6E1 /* UserService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserService+Mock.swift"; sourceTree = "<group>"; };
+		512ACC66250195D90006C6E1 /* JSError+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSError+Mock.swift"; sourceTree = "<group>"; };
+		512ACC68250195F70006C6E1 /* NSError+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Mock.swift"; sourceTree = "<group>"; };
+		512ACC6A250196280006C6E1 /* JSConfigs+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSConfigs+Mock.swift"; sourceTree = "<group>"; };
+		512ACC6C250196440006C6E1 /* JSFeatureFlags+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSFeatureFlags+Mock.swift"; sourceTree = "<group>"; };
+		512ACC70250196750006C6E1 /* AppService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppService+Mock.swift"; sourceTree = "<group>"; };
+		512ACC722501970D0006C6E1 /* JSContext+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSContext+Mock.swift"; sourceTree = "<group>"; };
+		512ACC74250197A70006C6E1 /* Encodable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Utils.swift"; sourceTree = "<group>"; };
+		512ACC7725019D5A0006C6E1 /* UserRepository+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserRepository+Mock.swift"; sourceTree = "<group>"; };
+		512ACC7B2501A7360006C6E1 /* AppRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepositoryTests.swift; sourceTree = "<group>"; };
+		512ACC7C2501A7540006C6E1 /* AppRepository+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRepository+Mock.swift"; sourceTree = "<group>"; };
 		5139840824FD67F3000579C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		5139840F24FE3EE3000579C9 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
+		5139841124FE45E8000579C9 /* JSClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSClientTests.swift; sourceTree = "<group>"; };
 		51C0AB9F24FBF8D8003B1C98 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		707408B924F95AF100E72281 /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
 		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -229,7 +257,7 @@
 		7089B6C824DD4ACF009E6BEE /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		7089B6C924DD4ACF009E6BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7089B6CE24DD4ACF009E6BEE /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7089B6D524DD4ACF009E6BEE /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		7089B6D524DD4ACF009E6BEE /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
 		7089B6D724DD4ACF009E6BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7089B6F524DD4B17009E6BEE /* JSRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSRepresentable.swift; sourceTree = "<group>"; };
 		7089B6F624DD4B17009E6BEE /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
@@ -244,7 +272,7 @@
 		70C0063624E1486B0036AFAB /* JSPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPlatform.h; sourceTree = "<group>"; };
 		70C0063724E1486B0036AFAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70C0063C24E1486B0036AFAB /* JSPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70C0064324E1486B0036AFAB /* JSPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSPlatformTests.swift; sourceTree = "<group>"; };
+		70C0064324E1486B0036AFAB /* AppServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceTests.swift; sourceTree = "<group>"; };
 		70C0064524E1486B0036AFAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70C0065A24E148D20036AFAB /* JSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSClient.swift; sourceTree = "<group>"; };
 		70C0065C24E148D20036AFAB /* JSConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSConfigs.swift; sourceTree = "<group>"; };
@@ -348,6 +376,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		512ACC612501953B0006C6E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC66250195D90006C6E1 /* JSError+Mock.swift */,
+				512ACC722501970D0006C6E1 /* JSContext+Mock.swift */,
+				512ACC68250195F70006C6E1 /* NSError+Mock.swift */,
+				512ACC6A250196280006C6E1 /* JSConfigs+Mock.swift */,
+				512ACC6C250196440006C6E1 /* JSFeatureFlags+Mock.swift */,
+				512ACC622501955B0006C6E1 /* JSUser+Mock.swift */,
+				512ACC74250197A70006C6E1 /* Encodable+Utils.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		512ACC6E250196640006C6E1 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC642501958D0006C6E1 /* UserService+Mock.swift */,
+				5139840F24FE3EE3000579C9 /* UserServiceTests.swift */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		512ACC6F2501966E0006C6E1 /* AppService */ = {
+			isa = PBXGroup;
+			children = (
+				70C0064324E1486B0036AFAB /* AppServiceTests.swift */,
+				512ACC70250196750006C6E1 /* AppService+Mock.swift */,
+			);
+			path = AppService;
+			sourceTree = "<group>";
+		};
+		512ACC7625019D270006C6E1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC7A2501A72E0006C6E1 /* AppRepository */,
+				512ACC792501A7230006C6E1 /* UserRepository */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		512ACC792501A7230006C6E1 /* UserRepository */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC7725019D5A0006C6E1 /* UserRepository+Mock.swift */,
+				7089B6D524DD4ACF009E6BEE /* UserRepositoryTests.swift */,
+			);
+			path = UserRepository;
+			sourceTree = "<group>";
+		};
+		512ACC7A2501A72E0006C6E1 /* AppRepository */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC7B2501A7360006C6E1 /* AppRepositoryTests.swift */,
+				512ACC7C2501A7540006C6E1 /* AppRepository+Mock.swift */,
+			);
+			path = AppRepository;
+			sourceTree = "<group>";
+		};
+		5139840A24FE3816000579C9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC6E250196640006C6E1 /* UserService */,
+				512ACC6F2501966E0006C6E1 /* AppService */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5139841324FE45EE000579C9 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				5139841124FE45E8000579C9 /* JSClientTests.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		51C0AB9E24FBF8C4003B1C98 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,7 +588,7 @@
 		7089B6D424DD4ACF009E6BEE /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				7089B6D524DD4ACF009E6BEE /* DataTests.swift */,
+				512ACC7625019D270006C6E1 /* Repositories */,
 				7089B6D724DD4ACF009E6BEE /* Info.plist */,
 			);
 			path = DataTests;
@@ -557,8 +661,10 @@
 		70C0064224E1486B0036AFAB /* JSPlatformTests */ = {
 			isa = PBXGroup;
 			children = (
-				70C0064324E1486B0036AFAB /* JSPlatformTests.swift */,
+				512ACC612501953B0006C6E1 /* Models */,
+				5139840A24FE3816000579C9 /* API */,
 				70C0064524E1486B0036AFAB /* Info.plist */,
+				5139841324FE45EE000579C9 /* Client */,
 			);
 			path = JSPlatformTests;
 			sourceTree = "<group>";
@@ -1058,7 +1164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7089B6D624DD4ACF009E6BEE /* DataTests.swift in Sources */,
+				512ACC7825019D5A0006C6E1 /* UserRepository+Mock.swift in Sources */,
+				7089B6D624DD4ACF009E6BEE /* UserRepositoryTests.swift in Sources */,
+				512ACC7D2501A7880006C6E1 /* AppRepository+Mock.swift in Sources */,
+				512ACC7E2501A78C0006C6E1 /* AppRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1082,7 +1191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C0064424E1486B0036AFAB /* JSPlatformTests.swift in Sources */,
+				512ACC69250195F70006C6E1 /* NSError+Mock.swift in Sources */,
+				512ACC75250197A70006C6E1 /* Encodable+Utils.swift in Sources */,
+				512ACC6D250196440006C6E1 /* JSFeatureFlags+Mock.swift in Sources */,
+				70C0064424E1486B0036AFAB /* AppServiceTests.swift in Sources */,
+				512ACC632501955C0006C6E1 /* JSUser+Mock.swift in Sources */,
+				512ACC652501958D0006C6E1 /* UserService+Mock.swift in Sources */,
+				5139841224FE45E8000579C9 /* JSClientTests.swift in Sources */,
+				512ACC6B250196280006C6E1 /* JSConfigs+Mock.swift in Sources */,
+				512ACC732501970D0006C6E1 /* JSContext+Mock.swift in Sources */,
+				512ACC71250196750006C6E1 /* AppService+Mock.swift in Sources */,
+				5139841024FE3EE4000579C9 /* UserServiceTests.swift in Sources */,
+				512ACC67250195D90006C6E1 /* JSError+Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

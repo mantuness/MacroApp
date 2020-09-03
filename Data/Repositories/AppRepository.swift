@@ -2,7 +2,6 @@ import Foundation
 import Domain
 import JSPlatform
 
-// Can we improve this by having the jsAppService setup in an environment?
 public struct AppRepository {
     public var jsAppService: JSPlatform.AppService
     
@@ -32,12 +31,6 @@ extension AppRepository: Domain.AppRepository {
     public func set(value: Bool, for ff: FeatureFlag) {
         set(jsAppService, value, ff)
     }
-}
-
-extension AppRepository {
-    public static var mock: AppRepository = .init(
-        jsAppService: .mock
-    )
 }
 
 private func getConfigs(jsAppService: JSPlatform.AppService, completion: @escaping (Result<Configs, Error>) -> Void) -> Configs? {

@@ -31,17 +31,3 @@ private func newUser(name: String, password: String, completion: @escaping (Resu
 private func deleteUser(id: Int, completion: @escaping (Result<Void, Error>) -> Void ) {
     JSClientVoid().invokeMethod("JSDispatcherModule.deleteUser", nil, completion)
 }
-
-extension UserService {
-    public static var mock = UserService(
-        getUser: { id, callback in
-            callback(.success(JSUser(id: id, name: "Already existing user")))
-        },
-        newUser: { name, _, callback in
-            callback(.success(.init(id: 1, name: name)))
-        },
-        deleteUser: { id, callback in
-            callback(.success(()))
-        }
-    )
-}

@@ -9,23 +9,17 @@ public struct JSClientVoid {
     var invokeMethod = invokeMethod(named:parameters:completion:)
 }
 
-func invokeMethod<T>(named: String, parameters: [Any]?, completion: @escaping ((Result<T, Error>) -> Void)) where T: Codable {
-    var arguments: [Any]?
-    if let parameters = parameters {
-        arguments?.append(parameters)
-    }
-    arguments?.append(onCompletionSuccess(closure: completion))
-    arguments?.append(onCompletionFailure(closure: completion))
+private func invokeMethod<T>(named: String, parameters: [Any]?, completion: @escaping ((Result<T, Error>) -> Void)) where T: Codable {
+    var arguments = parameters ?? []
+    arguments.append(onCompletionSuccess(closure: completion))
+    arguments.append(onCompletionFailure(closure: completion))
     Current.mainJSContext.mainJSValue?.invokeMethod(named, withArguments: arguments)
 }
 
 private func invokeMethod(named: String, parameters: [Any]?, completion: @escaping ((Result<Void, Error>) -> Void)) {
-    var arguments: [Any]?
-    if let parameters = parameters {
-        arguments?.append(parameters)
-    }
-    arguments?.append(onCompletionSuccess(closure: completion))
-    arguments?.append(onCompletionFailure(closure: completion))
+    var arguments = parameters ?? []
+    arguments.append(onCompletionSuccess(closure: completion))
+    arguments.append(onCompletionFailure(closure: completion))
     Current.mainJSContext.mainJSValue?.invokeMethod(named, withArguments: arguments)
 }
 
@@ -47,7 +41,7 @@ private func onCompletionSuccess<T: Codable>(closure: @escaping ((Result<T, Erro
             closure(.success(dataDecoded))
         }
         catch let error {
-            closure(.failure(JSError(error: error)))
+            closure(.failure(JSError.initialize(from: error)))
         }
     }
     return JSValue(object: object, in: Current.mainJSContext)
@@ -64,7 +58,7 @@ private func onCompletionFailure<T>(closure: @escaping ((Result<T, Error>) -> Vo
             closure(.failure(dataDecoded))
         }
         catch let error {
-            closure(.failure(JSError(error: error)))
+            closure(.failure(JSError.initialize(from: error)))
         }
     }
     return JSValue(object: object, in: Current.mainJSContext)

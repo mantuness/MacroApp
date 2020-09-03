@@ -24,13 +24,3 @@ private func getFeatureFlags(completion: @escaping (Result<JSFeatureFlags, Error
     JSClient().invokeMethod("JSDispatcherModule.getFeatureFlags", nil, completion)
 }
 
-extension AppService {
-    public static var mock = AppService(
-        getConfigs: { callback in
-            callback(.success(JSConfigs(rottenTomatoesFreshMinimumValue: nil, spsEndpointHost: nil)))
-        },
-        getFeatureFlags: { callback in
-            callback(.success(.init(manhattanPdp: true, trendingHomepage: true, badjorasDoModem: true)))
-        }
-    )
-}

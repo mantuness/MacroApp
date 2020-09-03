@@ -28,10 +28,6 @@ extension UserRepository: Domain.UserRepository {
     }
 }
 
-extension UserRepository {
-    public static var mock = UserRepository(jsUserService: .mock)
-}
-
 private func getUser(jsUserService: JSPlatform.UserService, id: Int, completion: @escaping (Result<User, Error>) -> Void) {
     jsUserService.getUser(id) { result in
         let newResult = result.map { $0.asDomain() }

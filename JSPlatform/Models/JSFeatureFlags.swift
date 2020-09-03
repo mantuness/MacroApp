@@ -1,6 +1,6 @@
 import Foundation
 
-public struct JSFeatureFlags: Codable {
+public struct JSFeatureFlags: Codable, Equatable {
     public let manhattanPdp: Bool
     public let trendingHomepage: Bool
     public let badjorasDoModem: Bool
