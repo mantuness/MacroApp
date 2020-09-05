@@ -1,5 +1,4 @@
 import UIKit
-import Swinject
 
 protocol UserViewControllerDelegate: class {
     func goBack()

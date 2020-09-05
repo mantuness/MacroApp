@@ -1,6 +1,5 @@
 import Foundation
 import Domain
-import Swinject
 
 final class InitialViewModel {
     var configs: Configs?

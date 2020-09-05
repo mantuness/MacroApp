@@ -1,5 +1,4 @@
 import UIKit
-import Swinject
 
 protocol SettingsViewControllerDelegate: class {
     func didPressUserButton(userId: Int)

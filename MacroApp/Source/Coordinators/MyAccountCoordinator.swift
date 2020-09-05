@@ -1,5 +1,4 @@
 import UIKit
-import Swinject
 
 final class MyAccountCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
