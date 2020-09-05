@@ -13,9 +13,7 @@ class UserRepositoryTests: XCTestCase {
             completion(.success(jsUser))
         }
         
-        let userRepository: Domain.UserRepository = UserRepository.mock(userService)
-
-        userRepository.getUser(id: jsUser.id) { result in
+        UserRepository().getUser(userService)(jsUser.id) { result in
             switch result {
             case .success(let user):
                 XCTAssertEqual(user.asJS(), jsUser)
@@ -32,10 +30,8 @@ class UserRepositoryTests: XCTestCase {
         userService.newUser = { name, password, completion in
             completion(.success(jsUser))
         }
-        
-        let userRepository: Domain.UserRepository = UserRepository.mock(userService)
 
-        userRepository.createUser(name: jsUser.name, password: "") { result in
+        UserRepository().createUser(userService)(jsUser.name, "") { result in
             switch result {
             case .success(let user):
                 XCTAssertEqual(user.asJS(), jsUser)
@@ -53,9 +49,7 @@ class UserRepositoryTests: XCTestCase {
             completion(.success(()))
         }
         
-        let userRepository: Domain.UserRepository = UserRepository.mock(userService)
-
-        userRepository.delete(id: jsUser.id) { result in
+        UserRepository().delete(userService)(jsUser.id) { result in
             switch result {
             case .success:
                 XCTAssert(true)

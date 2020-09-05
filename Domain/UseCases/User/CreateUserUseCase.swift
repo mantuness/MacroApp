@@ -10,9 +10,9 @@ public struct CreateUserUseCase: UseCase {
     
     public var execute: (Input) -> Void = { input in
         input.userRepository.createUser(
-            name: input.name,
-            password: input.password,
-            completion: input.completion
+            input.name,
+            input.password,
+            input.completion
         )
     }
     
@@ -22,11 +22,5 @@ public struct CreateUserUseCase: UseCase {
     
     internal init(execute: @escaping (Input) -> Void) {
         self.execute = execute
-    }
-}
-
-extension CreateUserUseCase {
-    public static let mock: Self = .init { (input) in
-        input.completion(.success(.init(id: 0, name: input.name)))
     }
 }

@@ -8,7 +8,7 @@ public struct GetUserUseCase: UseCase {
     }
 
     public var execute: (Input) -> Void = { input in
-        input.userRepository.getUser(id: input.id, completion: input.completion)
+        input.userRepository.getUser(input.id, input.completion)
     }
     
     public init() {

@@ -8,7 +8,7 @@ public struct DeleteUserUseCase: UseCase {
     }
     
     public var execute: (Input) -> Void = { input in
-        return input.userRepository.delete(id: input.id, completion: input.completion)
+        return input.userRepository.delete(input.id, input.completion)
     }
     
     public init() {

@@ -19,6 +19,10 @@
 		512ACC7825019D5A0006C6E1 /* UserRepository+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC7725019D5A0006C6E1 /* UserRepository+Mock.swift */; };
 		512ACC7D2501A7880006C6E1 /* AppRepository+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC7C2501A7540006C6E1 /* AppRepository+Mock.swift */; };
 		512ACC7E2501A78C0006C6E1 /* AppRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC7B2501A7360006C6E1 /* AppRepositoryTests.swift */; };
+		512ACC832501AC630006C6E1 /* CreateUserUseCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC822501AC600006C6E1 /* CreateUserUseCase+Mock.swift */; };
+		512ACC852501AC960006C6E1 /* CreateUserUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC842501AC960006C6E1 /* CreateUserUseCaseTests.swift */; };
+		512ACC862501B7E60006C6E1 /* XMLHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C0066024E148D20036AFAB /* XMLHTTPRequest.h */; };
+		512ACC872501B7E60006C6E1 /* XMLHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C0066224E148D20036AFAB /* XMLHTTPRequest.m */; };
 		5139840924FD67F3000579C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840824FD67F3000579C9 /* Environment.swift */; };
 		5139841024FE3EE4000579C9 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840F24FE3EE3000579C9 /* UserServiceTests.swift */; };
 		5139841224FE45E8000579C9 /* JSClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139841124FE45E8000579C9 /* JSClientTests.swift */; };
@@ -73,9 +77,7 @@
 		70C0066324E148D20036AFAB /* JSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0065A24E148D20036AFAB /* JSClient.swift */; };
 		70C0066424E148D20036AFAB /* JSConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0065C24E148D20036AFAB /* JSConfigs.swift */; };
 		70C0066524E148D20036AFAB /* JSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0065D24E148D20036AFAB /* JSUser.swift */; };
-		70C0066624E148D20036AFAB /* XMLHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C0066024E148D20036AFAB /* XMLHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70C0066724E148D20036AFAB /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 70C0066124E148D20036AFAB /* main.js */; };
-		70C0066824E148D20036AFAB /* XMLHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C0066224E148D20036AFAB /* XMLHTTPRequest.m */; };
 		70C0066A24E14AC10036AFAB /* JSPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; };
 		70C0066B24E14AC10036AFAB /* JSPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70C0067024E14D2E0036AFAB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0066F24E14D2E0036AFAB /* UserService.swift */; };
@@ -222,6 +224,8 @@
 		512ACC7725019D5A0006C6E1 /* UserRepository+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserRepository+Mock.swift"; sourceTree = "<group>"; };
 		512ACC7B2501A7360006C6E1 /* AppRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepositoryTests.swift; sourceTree = "<group>"; };
 		512ACC7C2501A7540006C6E1 /* AppRepository+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRepository+Mock.swift"; sourceTree = "<group>"; };
+		512ACC822501AC600006C6E1 /* CreateUserUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateUserUseCase+Mock.swift"; sourceTree = "<group>"; };
+		512ACC842501AC960006C6E1 /* CreateUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserUseCaseTests.swift; sourceTree = "<group>"; };
 		5139840824FD67F3000579C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5139840F24FE3EE3000579C9 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
 		5139841124FE45E8000579C9 /* JSClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSClientTests.swift; sourceTree = "<group>"; };
@@ -433,6 +437,31 @@
 				512ACC7C2501A7540006C6E1 /* AppRepository+Mock.swift */,
 			);
 			path = AppRepository;
+			sourceTree = "<group>";
+		};
+		512ACC7F2501AC160006C6E1 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC802501AC4E0006C6E1 /* User */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		512ACC802501AC4E0006C6E1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC812501AC570006C6E1 /* CreateUserUseCase */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		512ACC812501AC570006C6E1 /* CreateUserUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC842501AC960006C6E1 /* CreateUserUseCaseTests.swift */,
+				512ACC822501AC600006C6E1 /* CreateUserUseCase+Mock.swift */,
+			);
+			path = CreateUserUseCase;
 			sourceTree = "<group>";
 		};
 		5139840A24FE3816000579C9 /* API */ = {
@@ -730,6 +759,7 @@
 		70C68F8224D456520009DFC6 /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				512ACC7F2501AC160006C6E1 /* UseCases */,
 				70C68F8324D456520009DFC6 /* DomainTests.swift */,
 				70C68F8524D456520009DFC6 /* Info.plist */,
 			);
@@ -844,7 +874,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C0066624E148D20036AFAB /* XMLHTTPRequest.h in Headers */,
+				512ACC862501B7E60006C6E1 /* XMLHTTPRequest.h in Headers */,
 				70C0064624E1486B0036AFAB /* JSPlatform.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1180,7 +1210,7 @@
 				7085642824E213840014A62F /* AppService.swift in Sources */,
 				70C0067024E14D2E0036AFAB /* UserService.swift in Sources */,
 				51C0ABA024FBF8D8003B1C98 /* Environment.swift in Sources */,
-				70C0066824E148D20036AFAB /* XMLHTTPRequest.m in Sources */,
+				512ACC872501B7E60006C6E1 /* XMLHTTPRequest.m in Sources */,
 				70C0066324E148D20036AFAB /* JSClient.swift in Sources */,
 				70C0066524E148D20036AFAB /* JSUser.swift in Sources */,
 				707408BA24F95AF100E72281 /* JSError.swift in Sources */,
@@ -1230,7 +1260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512ACC852501AC960006C6E1 /* CreateUserUseCaseTests.swift in Sources */,
 				70C68F8424D456520009DFC6 /* DomainTests.swift in Sources */,
+				512ACC832501AC630006C6E1 /* CreateUserUseCase+Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
