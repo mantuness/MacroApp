@@ -5,18 +5,22 @@ final class MyAccountCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     weak var delegate: CoordinatorDelegate?
     
-    private var navigationVC: UINavigationController?
+    var wrapInNavigationController: (UIViewController) -> UINavigationController? = {
+        .init(rootViewController: $0)
+    }
     
     private let anchorVC: UIViewController
-    init(delegate: CoordinatorDelegate, anchorVC: UIViewController) {
-        self.delegate = delegate
+    private var navigationVC: UINavigationController?
+    
+    init(anchorVC: UIViewController) {
         self.anchorVC = anchorVC
     }
     
-    func execute() {
-        navigationVC = UINavigationController(rootViewController: SettingsViewController(delegate: self))
-        navigationVC?.modalPresentationStyle = .fullScreen
-        anchorVC.present(navigationVC!, animated: false, completion: nil)
+    lazy var execute = { [weak self] in
+        guard let self = self else { return }
+        self.navigationVC = self.wrapInNavigationController(SettingsViewController(delegate: self))
+        self.navigationVC?.modalPresentationStyle = .fullScreen
+        self.anchorVC.present(self.navigationVC!, animated: false, completion: nil)
     }
 }
 
@@ -38,14 +42,5 @@ extension MyAccountCoordinator: SettingsViewControllerDelegate {
 extension MyAccountCoordinator: UserViewControllerDelegate {
     func goBack() {
         // Just for demo purposes, the user controller is already being popped by iOS  (check viewDidDisappear from UserViewController)
-    }
-}
-
-final class MyAccountCoordinatorFactory {
-    func create(anchorVC: UIViewController, coordinatorDelegate: CoordinatorDelegate) -> MyAccountCoordinator {
-        return MyAccountCoordinator(
-            delegate: coordinatorDelegate,
-            anchorVC: anchorVC
-        )
     }
 }

@@ -8,7 +8,7 @@ protocol SettingsViewControllerDelegate: class {
 
 final class SettingsViewController: UIViewController {
     private weak var delegate: SettingsViewControllerDelegate?
-    private let viewModel: SettingsViewModel = .init()
+    var viewModel: SettingsViewModel = .init()
     
     init(delegate: SettingsViewControllerDelegate) {
         self.delegate = delegate
@@ -16,7 +16,7 @@ final class SettingsViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
     
     @IBOutlet var textField: UITextField!
@@ -54,25 +54,8 @@ final class SettingsViewController: UIViewController {
             let id = Int(text) else { return }
         delegate?.didPressUserButton(userId: id)
     }
+    
     @IBAction func didTapClose(_ sender: UIButton) {
         delegate?.didTapClose()
-    }
-}
-
-extension SettingsViewController {
-    static let mock: SettingsViewController = .init(delegate: MockSettingsViewController())
-    
-    // this shouldn't be here move to tests
-    class MockSettingsViewController: SettingsViewControllerDelegate {
-        var didCallPressUserButton = false
-        var didCallTapClose = false
-        
-        func didPressUserButton(userId: Int) {
-            didCallPressUserButton = true
-        }
-        
-        func didTapClose() {
-            didCallTapClose = true
-        }
     }
 }

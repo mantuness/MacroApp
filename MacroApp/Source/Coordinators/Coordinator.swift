@@ -17,7 +17,7 @@ protocol Coordinator: class {
     // Implementation should always enforce weak
     var delegate: CoordinatorDelegate? { get set }
 
-    func execute()
+    var execute: () -> Void { get set }
 }
 
 extension Coordinator {

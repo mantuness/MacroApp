@@ -24,20 +24,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="yq1-ae-Dys">
-                    <rect key="frame" x="98.5" y="412.5" width="217" height="71"/>
+                    <rect key="frame" x="158.5" y="433" width="97" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXj-7l-X8G">
-                            <rect key="frame" x="60" y="0.0" width="97" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
                             <state key="normal" title="Go to settings"/>
                             <connections>
                                 <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="84G-JM-sel"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJg-Dz-Ojb">
-                            <rect key="frame" x="0.0" y="41" width="217" height="30"/>
-                            <state key="normal" title="Go to settings - Current pattern"/>
-                            <connections>
-                                <action selector="didTapSettingsCurrentPatternButton:" destination="-1" eventType="touchUpInside" id="sVM-iB-m7M"/>
                             </connections>
                         </button>
                     </subviews>

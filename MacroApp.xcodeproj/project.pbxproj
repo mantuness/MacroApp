@@ -40,9 +40,31 @@
 		512ACCBD250402CB0006C6E1 /* GetFeatureFlagsUseCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCBB250402B90006C6E1 /* GetFeatureFlagsUseCase+Mock.swift */; };
 		512ACCC2250404720006C6E1 /* SetFeatureFlagValueUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCC12504045E0006C6E1 /* SetFeatureFlagValueUseCaseTests.swift */; };
 		512ACCC4250404840006C6E1 /* SetFeatureFlagValueUseCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCC3250404840006C6E1 /* SetFeatureFlagValueUseCase+Mock.swift */; };
-		5139840924FD67F3000579C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840824FD67F3000579C9 /* Environment.swift */; };
+		512ACCC5250412AA0006C6E1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840824FD67F3000579C9 /* Environment.swift */; };
+		512ACCC825041E4F0006C6E1 /* MyAccountCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCC725041E4F0006C6E1 /* MyAccountCoordinatorTests.swift */; };
 		5139841024FE3EE4000579C9 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840F24FE3EE3000579C9 /* UserServiceTests.swift */; };
 		5139841224FE45E8000579C9 /* JSClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139841124FE45E8000579C9 /* JSClientTests.swift */; };
+		51AB593F250432C900421119 /* GlobalEnvironmentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB593C2504329100421119 /* GlobalEnvironmentMock.swift */; };
+		51AB5940250432C900421119 /* XCTestCaseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB593A2504326000421119 /* XCTestCaseExtensions.swift */; };
+		51AB5941250432C900421119 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCCC250431FB0006C6E1 /* MockNavigationController.swift */; };
+		51AB5942250432C900421119 /* MockUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCCE250432160006C6E1 /* MockUIWindow.swift */; };
+		51AB5943250432C900421119 /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCCA250431E50006C6E1 /* MockViewController.swift */; };
+		51AB59462504330800421119 /* InitialViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB59452504330800421119 /* InitialViewModelTests.swift */; };
+		51AB594825043B6C00421119 /* ConfigsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB594725043B6C00421119 /* ConfigsMock.swift */; };
+		51AB594A25043B8500421119 /* AppRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB594925043B8500421119 /* AppRepositoryMock.swift */; };
+		51AB594C25043BED00421119 /* InitialViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB594B25043BED00421119 /* InitialViewControllerTests.swift */; };
+		51AB594F25043FD900421119 /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB594E25043FD900421119 /* SettingsViewModelTests.swift */; };
+		51AB59512504420B00421119 /* MockInitialViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB59502504420B00421119 /* MockInitialViewControllerDelegate.swift */; };
+		51AB59532504423F00421119 /* InitialViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB59522504423F00421119 /* InitialViewControllerMock.swift */; };
+		51AB59552504427000421119 /* SettingsViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB59542504427000421119 /* SettingsViewModelMock.swift */; };
+		51AB5957250442A100421119 /* MockCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB5956250442A100421119 /* MockCoordinatorDelegate.swift */; };
+		51AB5959250442E600421119 /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB5958250442E600421119 /* SettingsViewControllerTests.swift */; };
+		51AB595B250446EC00421119 /* SettingsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB595A250446EC00421119 /* SettingsViewControllerMock.swift */; };
+		51AB595D250446FF00421119 /* MockSettingsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB595C250446FE00421119 /* MockSettingsViewControllerDelegate.swift */; };
+		51AB59602504476F00421119 /* UserViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB595F2504476F00421119 /* UserViewModelMock.swift */; };
+		51AB5962250447A400421119 /* MockUserViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB5961250447A400421119 /* MockUserViewControllerDelegate.swift */; };
+		51AB5964250447C900421119 /* UserViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB5963250447C900421119 /* UserViewControllerMock.swift */; };
+		51AB5966250447E700421119 /* UserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AB5965250447E700421119 /* UserViewControllerTests.swift */; };
 		51C0ABA024FBF8D8003B1C98 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0AB9F24FBF8D8003B1C98 /* Environment.swift */; };
 		707408BA24F95AF100E72281 /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707408B924F95AF100E72281 /* JSError.swift */; };
 		708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; };
@@ -107,7 +129,7 @@
 		70F6478224BDB2500081A3F6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6478124BDB2500081A3F6 /* SettingsViewController.swift */; };
 		70F6478724BDB2520081A3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F6478624BDB2520081A3F6 /* Assets.xcassets */; };
 		70F6478A24BDB2520081A3F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F6478824BDB2520081A3F6 /* LaunchScreen.storyboard */; };
-		70F6479524BDB2530081A3F6 /* MacroAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6479424BDB2530081A3F6 /* MacroAppTests.swift */; };
+		70F6479524BDB2530081A3F6 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6479424BDB2530081A3F6 /* AppCoordinatorTests.swift */; };
 		70F647B924BDB7D00081A3F6 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F647B824BDB7D00081A3F6 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -259,9 +281,31 @@
 		512ACCBB250402B90006C6E1 /* GetFeatureFlagsUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetFeatureFlagsUseCase+Mock.swift"; sourceTree = "<group>"; };
 		512ACCC12504045E0006C6E1 /* SetFeatureFlagValueUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFeatureFlagValueUseCaseTests.swift; sourceTree = "<group>"; };
 		512ACCC3250404840006C6E1 /* SetFeatureFlagValueUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetFeatureFlagValueUseCase+Mock.swift"; sourceTree = "<group>"; };
+		512ACCC725041E4F0006C6E1 /* MyAccountCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountCoordinatorTests.swift; sourceTree = "<group>"; };
+		512ACCCA250431E50006C6E1 /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
+		512ACCCC250431FB0006C6E1 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		512ACCCE250432160006C6E1 /* MockUIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUIWindow.swift; sourceTree = "<group>"; };
 		5139840824FD67F3000579C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5139840F24FE3EE3000579C9 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
 		5139841124FE45E8000579C9 /* JSClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSClientTests.swift; sourceTree = "<group>"; };
+		51AB593A2504326000421119 /* XCTestCaseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtensions.swift; sourceTree = "<group>"; };
+		51AB593C2504329100421119 /* GlobalEnvironmentMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnvironmentMock.swift; sourceTree = "<group>"; };
+		51AB59452504330800421119 /* InitialViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModelTests.swift; sourceTree = "<group>"; };
+		51AB594725043B6C00421119 /* ConfigsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigsMock.swift; sourceTree = "<group>"; };
+		51AB594925043B8500421119 /* AppRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepositoryMock.swift; sourceTree = "<group>"; };
+		51AB594B25043BED00421119 /* InitialViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerTests.swift; sourceTree = "<group>"; };
+		51AB594E25043FD900421119 /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
+		51AB59502504420B00421119 /* MockInitialViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInitialViewControllerDelegate.swift; sourceTree = "<group>"; };
+		51AB59522504423F00421119 /* InitialViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewControllerMock.swift; sourceTree = "<group>"; };
+		51AB59542504427000421119 /* SettingsViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelMock.swift; sourceTree = "<group>"; };
+		51AB5956250442A100421119 /* MockCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		51AB5958250442E600421119 /* SettingsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTests.swift; sourceTree = "<group>"; };
+		51AB595A250446EC00421119 /* SettingsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerMock.swift; sourceTree = "<group>"; };
+		51AB595C250446FE00421119 /* MockSettingsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSettingsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		51AB595F2504476F00421119 /* UserViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelMock.swift; sourceTree = "<group>"; };
+		51AB5961250447A400421119 /* MockUserViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserViewControllerDelegate.swift; sourceTree = "<group>"; };
+		51AB5963250447C900421119 /* UserViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerMock.swift; sourceTree = "<group>"; };
+		51AB5965250447E700421119 /* UserViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerTests.swift; sourceTree = "<group>"; };
 		51C0AB9F24FBF8D8003B1C98 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		707408B924F95AF100E72281 /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
 		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -332,7 +376,7 @@
 		70F6478924BDB2520081A3F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70F6478B24BDB2520081A3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F6479024BDB2530081A3F6 /* MacroAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacroAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70F6479424BDB2530081A3F6 /* MacroAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAppTests.swift; sourceTree = "<group>"; };
+		70F6479424BDB2530081A3F6 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		70F6479624BDB2530081A3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F647A624BDB43B0081A3F6 /* stage_debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = stage_debug.xcconfig; sourceTree = "<group>"; };
 		70F647A724BDB4400081A3F6 /* stage_release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = stage_release.xcconfig; sourceTree = "<group>"; };
@@ -584,6 +628,31 @@
 			path = ValidateUserIdUseCase;
 			sourceTree = "<group>";
 		};
+		512ACCC6250412D60006C6E1 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				70F6479424BDB2530081A3F6 /* AppCoordinatorTests.swift */,
+				51AB594725043B6C00421119 /* ConfigsMock.swift */,
+				51AB594925043B8500421119 /* AppRepositoryMock.swift */,
+				512ACCC725041E4F0006C6E1 /* MyAccountCoordinatorTests.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		512ACCC9250431D70006C6E1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCCC250431FB0006C6E1 /* MockNavigationController.swift */,
+				51AB59502504420B00421119 /* MockInitialViewControllerDelegate.swift */,
+				51AB5961250447A400421119 /* MockUserViewControllerDelegate.swift */,
+				51AB595C250446FE00421119 /* MockSettingsViewControllerDelegate.swift */,
+				51AB5956250442A100421119 /* MockCoordinatorDelegate.swift */,
+				512ACCCE250432160006C6E1 /* MockUIWindow.swift */,
+				512ACCCA250431E50006C6E1 /* MockViewController.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		5139840A24FE3816000579C9 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,6 +668,46 @@
 				5139841124FE45E8000579C9 /* JSClientTests.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		51AB59392504325200421119 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51AB593C2504329100421119 /* GlobalEnvironmentMock.swift */,
+				51AB59522504423F00421119 /* InitialViewControllerMock.swift */,
+				51AB59542504427000421119 /* SettingsViewModelMock.swift */,
+				51AB595A250446EC00421119 /* SettingsViewControllerMock.swift */,
+				51AB595F2504476F00421119 /* UserViewModelMock.swift */,
+				51AB593A2504326000421119 /* XCTestCaseExtensions.swift */,
+				51AB5963250447C900421119 /* UserViewControllerMock.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51AB5944250432F700421119 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				51AB594B25043BED00421119 /* InitialViewControllerTests.swift */,
+				51AB59452504330800421119 /* InitialViewModelTests.swift */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		51AB594D25043FCA00421119 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				51AB5958250442E600421119 /* SettingsViewControllerTests.swift */,
+				51AB594E25043FD900421119 /* SettingsViewModelTests.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		51AB595E2504471F00421119 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				51AB5965250447E700421119 /* UserViewControllerTests.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		51C0AB9E24FBF8C4003B1C98 /* Environment */ = {
@@ -673,7 +782,6 @@
 				7085643324E2AA600014A62F /* Coordinator.swift */,
 				7085640124E1B0250014A62F /* AppCoordinator.swift */,
 				7085643524E2E5920014A62F /* MyAccountCoordinator.swift */,
-				5139840824FD67F3000579C9 /* Environment.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -923,6 +1031,7 @@
 			children = (
 				70F6477D24BDB2500081A3F6 /* AppDelegate.swift */,
 				70F6477F24BDB2500081A3F6 /* SceneDelegate.swift */,
+				5139840824FD67F3000579C9 /* Environment.swift */,
 				70F6479F24BDB3150081A3F6 /* Source */,
 				70F647A124BDB36A0081A3F6 /* Resources */,
 				70F647A224BDB3960081A3F6 /* SupportingFiles */,
@@ -933,7 +1042,12 @@
 		70F6479324BDB2530081A3F6 /* MacroAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				70F6479424BDB2530081A3F6 /* MacroAppTests.swift */,
+				512ACCC6250412D60006C6E1 /* Coordinators */,
+				51AB5944250432F700421119 /* Initial */,
+				51AB594D25043FCA00421119 /* Settings */,
+				51AB595E2504471F00421119 /* User */,
+				51AB59392504325200421119 /* Extensions */,
+				512ACCC9250431D70006C6E1 /* Mocks */,
 				70F6479624BDB2530081A3F6 /* Info.plist */,
 			);
 			path = MacroAppTests;
@@ -1407,8 +1521,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7085640224E1B0250014A62F /* AppCoordinator.swift in Sources */,
+				512ACCC5250412AA0006C6E1 /* Environment.swift in Sources */,
 				7085640E24E1FE750014A62F /* InitialViewController.swift in Sources */,
-				5139840924FD67F3000579C9 /* Environment.swift in Sources */,
 				7085643424E2AA600014A62F /* Coordinator.swift in Sources */,
 				70F6478224BDB2500081A3F6 /* SettingsViewController.swift in Sources */,
 				70F6477E24BDB2500081A3F6 /* AppDelegate.swift in Sources */,
@@ -1425,7 +1539,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70F6479524BDB2530081A3F6 /* MacroAppTests.swift in Sources */,
+				51AB5957250442A100421119 /* MockCoordinatorDelegate.swift in Sources */,
+				51AB5940250432C900421119 /* XCTestCaseExtensions.swift in Sources */,
+				51AB5941250432C900421119 /* MockNavigationController.swift in Sources */,
+				51AB594C25043BED00421119 /* InitialViewControllerTests.swift in Sources */,
+				51AB5959250442E600421119 /* SettingsViewControllerTests.swift in Sources */,
+				512ACCC825041E4F0006C6E1 /* MyAccountCoordinatorTests.swift in Sources */,
+				51AB59532504423F00421119 /* InitialViewControllerMock.swift in Sources */,
+				51AB59552504427000421119 /* SettingsViewModelMock.swift in Sources */,
+				51AB594825043B6C00421119 /* ConfigsMock.swift in Sources */,
+				51AB5966250447E700421119 /* UserViewControllerTests.swift in Sources */,
+				51AB59602504476F00421119 /* UserViewModelMock.swift in Sources */,
+				51AB5943250432C900421119 /* MockViewController.swift in Sources */,
+				51AB595B250446EC00421119 /* SettingsViewControllerMock.swift in Sources */,
+				51AB593F250432C900421119 /* GlobalEnvironmentMock.swift in Sources */,
+				70F6479524BDB2530081A3F6 /* AppCoordinatorTests.swift in Sources */,
+				51AB59512504420B00421119 /* MockInitialViewControllerDelegate.swift in Sources */,
+				51AB594A25043B8500421119 /* AppRepositoryMock.swift in Sources */,
+				51AB595D250446FF00421119 /* MockSettingsViewControllerDelegate.swift in Sources */,
+				51AB5942250432C900421119 /* MockUIWindow.swift in Sources */,
+				51AB59462504330800421119 /* InitialViewModelTests.swift in Sources */,
+				51AB594F25043FD900421119 /* SettingsViewModelTests.swift in Sources */,
+				51AB5962250447A400421119 /* MockUserViewControllerDelegate.swift in Sources */,
+				51AB5964250447C900421119 /* UserViewControllerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

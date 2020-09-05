@@ -13,7 +13,19 @@ private func invokeMethod<T>(named: String, parameters: [Any]?, completion: @esc
     var arguments = parameters ?? []
     arguments.append(onCompletionSuccess(closure: completion))
     arguments.append(onCompletionFailure(closure: completion))
-    Current.mainJSContext.mainJSValue?.invokeMethod(named, withArguments: arguments)
+    
+    if Current.mainJSContext.mainJSValue?.hasProperty(named) == true {
+        Current.mainJSContext.mainJSValue?.invokeMethod(named, withArguments: arguments)
+    } else {
+        let error = JSError(
+            error: NSError(
+                domain: "Property does not exist",
+                code: -1,
+                userInfo: nil
+            )
+        )
+        completion(.failure(error))
+    }
 }
 
 private func invokeMethod(named: String, parameters: [Any]?, completion: @escaping ((Result<Void, Error>) -> Void)) {
