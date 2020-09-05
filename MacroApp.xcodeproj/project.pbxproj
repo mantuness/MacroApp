@@ -23,6 +23,23 @@
 		512ACC852501AC960006C6E1 /* CreateUserUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC842501AC960006C6E1 /* CreateUserUseCaseTests.swift */; };
 		512ACC862501B7E60006C6E1 /* XMLHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C0066024E148D20036AFAB /* XMLHTTPRequest.h */; };
 		512ACC872501B7E60006C6E1 /* XMLHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C0066224E148D20036AFAB /* XMLHTTPRequest.m */; };
+		512ACC9C2503F8FE0006C6E1 /* UserRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC9B2503F8FE0006C6E1 /* UserRepositoryMock.swift */; };
+		512ACCA02503F9480006C6E1 /* UserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC9F2503F9320006C6E1 /* UserMock.swift */; };
+		512ACCA12503F9790006C6E1 /* NSErrorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACC9E2503F92C0006C6E1 /* NSErrorMock.swift */; };
+		512ACCA52503F9AF0006C6E1 /* GetUserUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCA32503F9A20006C6E1 /* GetUserUseCaseTests.swift */; };
+		512ACCA62503F9B20006C6E1 /* GetUserUseCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCA42503F9A20006C6E1 /* GetUserUseCase+Mock.swift */; };
+		512ACCAA2503FA890006C6E1 /* DeleteUserUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCA92503FA780006C6E1 /* DeleteUserUseCaseTests.swift */; };
+		512ACCAB2503FA890006C6E1 /* DeleteUserUseCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCA82503FA780006C6E1 /* DeleteUserUseCase+Mock.swift */; };
+		512ACCAD2503FC070006C6E1 /* ValidateUserIdUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCAC2503FBA00006C6E1 /* ValidateUserIdUseCaseTests.swift */; };
+		512ACCB02503FDB20006C6E1 /* GetConfigsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCAF2503FDB20006C6E1 /* GetConfigsUseCaseTests.swift */; };
+		512ACCB22503FDFC0006C6E1 /* AppRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCB12503FDFC0006C6E1 /* AppRepositoryMock.swift */; };
+		512ACCB4250400750006C6E1 /* GetConfigsUseCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCB3250400750006C6E1 /* GetConfigsUseCase+Mock.swift */; };
+		512ACCB62504012A0006C6E1 /* ConfigsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCB52504012A0006C6E1 /* ConfigsMock.swift */; };
+		512ACCB8250401540006C6E1 /* FeatureFlagMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCB7250401540006C6E1 /* FeatureFlagMock.swift */; };
+		512ACCBC250402C80006C6E1 /* GetFeatureFlagsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCBA250402B90006C6E1 /* GetFeatureFlagsUseCaseTests.swift */; };
+		512ACCBD250402CB0006C6E1 /* GetFeatureFlagsUseCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCBB250402B90006C6E1 /* GetFeatureFlagsUseCase+Mock.swift */; };
+		512ACCC2250404720006C6E1 /* SetFeatureFlagValueUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCC12504045E0006C6E1 /* SetFeatureFlagValueUseCaseTests.swift */; };
+		512ACCC4250404840006C6E1 /* SetFeatureFlagValueUseCase+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512ACCC3250404840006C6E1 /* SetFeatureFlagValueUseCase+Mock.swift */; };
 		5139840924FD67F3000579C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840824FD67F3000579C9 /* Environment.swift */; };
 		5139841024FE3EE4000579C9 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139840F24FE3EE3000579C9 /* UserServiceTests.swift */; };
 		5139841224FE45E8000579C9 /* JSClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5139841124FE45E8000579C9 /* JSClientTests.swift */; };
@@ -82,7 +99,6 @@
 		70C0066B24E14AC10036AFAB /* JSPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0063424E1486B0036AFAB /* JSPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70C0067024E14D2E0036AFAB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0066F24E14D2E0036AFAB /* UserService.swift */; };
 		70C68F7D24D456520009DFC6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C68F7424D456520009DFC6 /* Domain.framework */; };
-		70C68F8424D456520009DFC6 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C68F8324D456520009DFC6 /* DomainTests.swift */; };
 		70C68F8624D456520009DFC6 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C68F7624D456520009DFC6 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70C68F8924D456520009DFC6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C68F7424D456520009DFC6 /* Domain.framework */; };
 		70C68F8A24D456520009DFC6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70C68F7424D456520009DFC6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -226,6 +242,23 @@
 		512ACC7C2501A7540006C6E1 /* AppRepository+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRepository+Mock.swift"; sourceTree = "<group>"; };
 		512ACC822501AC600006C6E1 /* CreateUserUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateUserUseCase+Mock.swift"; sourceTree = "<group>"; };
 		512ACC842501AC960006C6E1 /* CreateUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserUseCaseTests.swift; sourceTree = "<group>"; };
+		512ACC9B2503F8FE0006C6E1 /* UserRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryMock.swift; sourceTree = "<group>"; };
+		512ACC9E2503F92C0006C6E1 /* NSErrorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorMock.swift; sourceTree = "<group>"; };
+		512ACC9F2503F9320006C6E1 /* UserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMock.swift; sourceTree = "<group>"; };
+		512ACCA32503F9A20006C6E1 /* GetUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseTests.swift; sourceTree = "<group>"; };
+		512ACCA42503F9A20006C6E1 /* GetUserUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetUserUseCase+Mock.swift"; sourceTree = "<group>"; };
+		512ACCA82503FA780006C6E1 /* DeleteUserUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeleteUserUseCase+Mock.swift"; sourceTree = "<group>"; };
+		512ACCA92503FA780006C6E1 /* DeleteUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserUseCaseTests.swift; sourceTree = "<group>"; };
+		512ACCAC2503FBA00006C6E1 /* ValidateUserIdUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserIdUseCaseTests.swift; sourceTree = "<group>"; };
+		512ACCAF2503FDB20006C6E1 /* GetConfigsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConfigsUseCaseTests.swift; sourceTree = "<group>"; };
+		512ACCB12503FDFC0006C6E1 /* AppRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepositoryMock.swift; sourceTree = "<group>"; };
+		512ACCB3250400750006C6E1 /* GetConfigsUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetConfigsUseCase+Mock.swift"; sourceTree = "<group>"; };
+		512ACCB52504012A0006C6E1 /* ConfigsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigsMock.swift; sourceTree = "<group>"; };
+		512ACCB7250401540006C6E1 /* FeatureFlagMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlagMock.swift; sourceTree = "<group>"; };
+		512ACCBA250402B90006C6E1 /* GetFeatureFlagsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeatureFlagsUseCaseTests.swift; sourceTree = "<group>"; };
+		512ACCBB250402B90006C6E1 /* GetFeatureFlagsUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetFeatureFlagsUseCase+Mock.swift"; sourceTree = "<group>"; };
+		512ACCC12504045E0006C6E1 /* SetFeatureFlagValueUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetFeatureFlagValueUseCaseTests.swift; sourceTree = "<group>"; };
+		512ACCC3250404840006C6E1 /* SetFeatureFlagValueUseCase+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetFeatureFlagValueUseCase+Mock.swift"; sourceTree = "<group>"; };
 		5139840824FD67F3000579C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		5139840F24FE3EE3000579C9 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
 		5139841124FE45E8000579C9 /* JSClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSClientTests.swift; sourceTree = "<group>"; };
@@ -290,7 +323,6 @@
 		70C68F7624D456520009DFC6 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		70C68F7724D456520009DFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70C68F7C24D456520009DFC6 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70C68F8324D456520009DFC6 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		70C68F8524D456520009DFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70F6477A24BDB2500081A3F6 /* MacroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F6477D24BDB2500081A3F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -443,6 +475,9 @@
 			isa = PBXGroup;
 			children = (
 				512ACC802501AC4E0006C6E1 /* User */,
+				512ACCAE2503FDA10006C6E1 /* Config */,
+				512ACCB9250402AF0006C6E1 /* FeatureFlag */,
+				512ACC9A2503F8D10006C6E1 /* Repositories */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -451,6 +486,9 @@
 			isa = PBXGroup;
 			children = (
 				512ACC812501AC570006C6E1 /* CreateUserUseCase */,
+				512ACCA72503FA6A0006C6E1 /* DeleteUserUseCase */,
+				512ACCA22503F9950006C6E1 /* GetUserUseCase */,
+				512ACCC02504041F0006C6E1 /* ValidateUserIdUseCase */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -462,6 +500,88 @@
 				512ACC822501AC600006C6E1 /* CreateUserUseCase+Mock.swift */,
 			);
 			path = CreateUserUseCase;
+			sourceTree = "<group>";
+		};
+		512ACC9A2503F8D10006C6E1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCB12503FDFC0006C6E1 /* AppRepositoryMock.swift */,
+				512ACC9B2503F8FE0006C6E1 /* UserRepositoryMock.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		512ACC9D2503F91A0006C6E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				512ACC9F2503F9320006C6E1 /* UserMock.swift */,
+				512ACC9E2503F92C0006C6E1 /* NSErrorMock.swift */,
+				512ACCB7250401540006C6E1 /* FeatureFlagMock.swift */,
+				512ACCB52504012A0006C6E1 /* ConfigsMock.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		512ACCA22503F9950006C6E1 /* GetUserUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCA32503F9A20006C6E1 /* GetUserUseCaseTests.swift */,
+				512ACCA42503F9A20006C6E1 /* GetUserUseCase+Mock.swift */,
+			);
+			path = GetUserUseCase;
+			sourceTree = "<group>";
+		};
+		512ACCA72503FA6A0006C6E1 /* DeleteUserUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCA92503FA780006C6E1 /* DeleteUserUseCaseTests.swift */,
+				512ACCA82503FA780006C6E1 /* DeleteUserUseCase+Mock.swift */,
+			);
+			path = DeleteUserUseCase;
+			sourceTree = "<group>";
+		};
+		512ACCAE2503FDA10006C6E1 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCAF2503FDB20006C6E1 /* GetConfigsUseCaseTests.swift */,
+				512ACCB3250400750006C6E1 /* GetConfigsUseCase+Mock.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		512ACCB9250402AF0006C6E1 /* FeatureFlag */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCBF250404130006C6E1 /* SetFeatureFlagValueUseCase */,
+				512ACCBE250404090006C6E1 /* GetFeatureFlagsUseCase */,
+			);
+			path = FeatureFlag;
+			sourceTree = "<group>";
+		};
+		512ACCBE250404090006C6E1 /* GetFeatureFlagsUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCBA250402B90006C6E1 /* GetFeatureFlagsUseCaseTests.swift */,
+				512ACCBB250402B90006C6E1 /* GetFeatureFlagsUseCase+Mock.swift */,
+			);
+			path = GetFeatureFlagsUseCase;
+			sourceTree = "<group>";
+		};
+		512ACCBF250404130006C6E1 /* SetFeatureFlagValueUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCC12504045E0006C6E1 /* SetFeatureFlagValueUseCaseTests.swift */,
+				512ACCC3250404840006C6E1 /* SetFeatureFlagValueUseCase+Mock.swift */,
+			);
+			path = SetFeatureFlagValueUseCase;
+			sourceTree = "<group>";
+		};
+		512ACCC02504041F0006C6E1 /* ValidateUserIdUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				512ACCAC2503FBA00006C6E1 /* ValidateUserIdUseCaseTests.swift */,
+			);
+			path = ValidateUserIdUseCase;
 			sourceTree = "<group>";
 		};
 		5139840A24FE3816000579C9 /* API */ = {
@@ -760,7 +880,7 @@
 			isa = PBXGroup;
 			children = (
 				512ACC7F2501AC160006C6E1 /* UseCases */,
-				70C68F8324D456520009DFC6 /* DomainTests.swift */,
+				512ACC9D2503F91A0006C6E1 /* Models */,
 				70C68F8524D456520009DFC6 /* Info.plist */,
 			);
 			path = DomainTests;
@@ -1260,9 +1380,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512ACCAD2503FC070006C6E1 /* ValidateUserIdUseCaseTests.swift in Sources */,
+				512ACCA62503F9B20006C6E1 /* GetUserUseCase+Mock.swift in Sources */,
+				512ACC9C2503F8FE0006C6E1 /* UserRepositoryMock.swift in Sources */,
+				512ACCC4250404840006C6E1 /* SetFeatureFlagValueUseCase+Mock.swift in Sources */,
 				512ACC852501AC960006C6E1 /* CreateUserUseCaseTests.swift in Sources */,
-				70C68F8424D456520009DFC6 /* DomainTests.swift in Sources */,
+				512ACCB22503FDFC0006C6E1 /* AppRepositoryMock.swift in Sources */,
+				512ACCA02503F9480006C6E1 /* UserMock.swift in Sources */,
 				512ACC832501AC630006C6E1 /* CreateUserUseCase+Mock.swift in Sources */,
+				512ACCB8250401540006C6E1 /* FeatureFlagMock.swift in Sources */,
+				512ACCAA2503FA890006C6E1 /* DeleteUserUseCaseTests.swift in Sources */,
+				512ACCA12503F9790006C6E1 /* NSErrorMock.swift in Sources */,
+				512ACCBC250402C80006C6E1 /* GetFeatureFlagsUseCaseTests.swift in Sources */,
+				512ACCAB2503FA890006C6E1 /* DeleteUserUseCase+Mock.swift in Sources */,
+				512ACCB02503FDB20006C6E1 /* GetConfigsUseCaseTests.swift in Sources */,
+				512ACCB62504012A0006C6E1 /* ConfigsMock.swift in Sources */,
+				512ACCBD250402CB0006C6E1 /* GetFeatureFlagsUseCase+Mock.swift in Sources */,
+				512ACCB4250400750006C6E1 /* GetConfigsUseCase+Mock.swift in Sources */,
+				512ACCC2250404720006C6E1 /* SetFeatureFlagValueUseCaseTests.swift in Sources */,
+				512ACCA52503F9AF0006C6E1 /* GetUserUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

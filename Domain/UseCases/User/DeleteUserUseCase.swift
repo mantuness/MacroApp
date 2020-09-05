@@ -14,14 +14,4 @@ public struct DeleteUserUseCase: UseCase {
     public init() {
         
     }
-    
-    internal init(execute: @escaping (Input) -> Void) {
-        self.execute = execute
-    }
-}
-
-extension DeleteUserUseCase {
-    public static let mock: Self = .init { (input) in
-        input.completion(.success(()))
-    }
 }

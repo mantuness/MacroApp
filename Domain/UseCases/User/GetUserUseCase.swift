@@ -14,14 +14,4 @@ public struct GetUserUseCase: UseCase {
     public init() {
         
     }
-    
-    internal init(execute: @escaping (Input) -> Void) {
-        self.execute = execute
-    }
-}
-
-extension GetUserUseCase {
-    public static let mock: Self = .init { (input) in
-        input.completion(.success(.init(id: input.id, name: "user name")))
-    }
 }

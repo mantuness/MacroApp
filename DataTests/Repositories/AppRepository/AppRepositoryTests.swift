@@ -1,4 +1,3 @@
-import Domain
 import JSPlatform
 import XCTest
 @testable import Data
@@ -10,17 +9,15 @@ class AppRepositoryTests: XCTestCase {
         appService.getConfigs = { completion in
             completion(.success(JSConfigs.mock))
         }
-        
-        let appRepository: Domain.AppRepository = AppRepository.mock(appService)
 
-        let result = appRepository.getConfigs { result in
+        let result = AppRepository().getConfigs(appService)({ result in
             switch result {
             case .success(let configs):
                 XCTAssertEqual(configs.asJS(), JSConfigs.mock)
             case .failure(let error):
                 XCTFail("Didn't expect to fail with error: \(error)")
             }
-        }
+        })
         
         XCTAssertNil(result)
     }
@@ -31,33 +28,27 @@ class AppRepositoryTests: XCTestCase {
             completion(.success(JSFeatureFlags.mock))
         }
         
-        let appRepository: Domain.AppRepository = AppRepository.mock(appService)
-
-        let result = appRepository.getFeatureFlags { result in
+        let result = AppRepository().getFeatureFlags(appService)({ result in
             switch result {
             case .success(let featureFlags):
                 XCTAssertEqual(featureFlags, try? JSFeatureFlags.mock.asDomain())
             case .failure(let error):
                 XCTFail("Didn't expect to fail with error: \(error)")
             }
-        }
+        })
         
         XCTAssertNil(result)
     }
     
     
     func testGetValueReturnsNil() {
-        let appRepository: Domain.AppRepository = AppRepository.mock(.init())
-
-        let result = appRepository.getValue(for: .manhattanPdp) { _ in }
+        let result = AppRepository().getValue(.init())(.manhattanPdp) { _ in }
         
         XCTAssertNil(result)
     }
     
     func testSetValue() {
-        let appRepository: Domain.AppRepository = AppRepository.mock(.init())
-
-        appRepository.set(value: true, for: .manhattanPdp)
+        AppRepository().set(.init())(true, .manhattanPdp)
         
         XCTAssert(true)
     }

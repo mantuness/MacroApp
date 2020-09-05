@@ -11,18 +11,10 @@ public struct GetFeatureFlagsUseCase: UseCase {
         }
     }
     public var execute: (Input) -> [FeatureFlag: Bool]? = { input in
-        input.appRepository.getFeatureFlags(completion: input.completion)
+        input.appRepository.getFeatureFlags(input.completion)
     }
     
     public init() {
         
     }
-        
-    internal init(execute: @escaping (Input) -> [FeatureFlag: Bool]?) {
-        self.execute = execute
-    }
-}
-
-extension GetFeatureFlagsUseCase {
-    public static let mock: Self = .init { _ in .mock }
 }

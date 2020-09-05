@@ -19,8 +19,4 @@ public struct CreateUserUseCase: UseCase {
     public init() {
         
     }
-    
-    internal init(execute: @escaping (Input) -> Void) {
-        self.execute = execute
-    }
 }

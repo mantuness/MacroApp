@@ -1,11 +1,11 @@
 import XCTest
 @testable import Domain
 
-class CreateUserUseCaseTests: XCTestCase {
+class GetUserUseCaseTests: XCTestCase {
     
     func testExecuteSucceedsWithUser() {
         let mockedUser = User.mock
-        let input = CreateUserUseCase.Input.mock(mockedUser) { result in
+        let input = GetUserUseCase.Input.mock(mockedUser) { result in
             switch result {
             case .success(let user):
                 XCTAssertEqual(user, mockedUser)
@@ -15,12 +15,12 @@ class CreateUserUseCaseTests: XCTestCase {
             
         }
         
-        CreateUserUseCase().execute(input)
+        GetUserUseCase().execute(input)
     }
     
     func testExecuteFailsWithError() {
         let mockedError = NSError.mock
-        let input = CreateUserUseCase.Input.failureMock(mockedError) { result in
+        let input = GetUserUseCase.Input.failureMock(mockedError) { result in
             switch result {
             case .success(let user):
                 XCTFail("Didn't expect to succeed with \(user)")
@@ -30,6 +30,6 @@ class CreateUserUseCaseTests: XCTestCase {
             
         }
         
-        CreateUserUseCase().execute(input)
+        GetUserUseCase().execute(input)
     }
 }

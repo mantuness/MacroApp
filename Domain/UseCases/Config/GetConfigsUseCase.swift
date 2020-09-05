@@ -11,28 +11,10 @@ public struct GetConfigsUseCase: UseCase {
     }
     
     public var execute: (Input) -> Configs? = { input in
-        return input.appRepository.getConfigs(completion: input.completion)
+        return input.appRepository.getConfigs(input.completion)
     }
     
     public init() {
         
-    }
-    
-    internal init(execute: @escaping (Input) -> Configs?) {
-        self.execute = execute
-    }
-}
-
-extension GetConfigsUseCase {
-    public static let mock: Self = .init { input -> Configs? in
-        input.completion(
-            .success(
-                .init(
-                    rottenTomatoesFreshMinimumValue: 0,
-                    spsEndpointHost: URL(string: "http://www.valid-url.com")!
-                )
-            )
-        )
-        return nil
     }
 }
