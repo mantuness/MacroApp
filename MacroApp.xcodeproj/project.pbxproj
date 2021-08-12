@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		707408BA24F95AF100E72281 /* JSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707408B924F95AF100E72281 /* JSError.swift */; };
-		708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; };
-		708563FE24E1AB3B0014A62F /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 708563FC24E1AB3B0014A62F /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708563FF24E1ABE50014A62F /* SettingsViewModel.swift */; };
 		7085640224E1B0250014A62F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085640124E1B0250014A62F /* AppCoordinator.swift */; };
 		7085640924E1B79B0014A62F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085640724E1B79B0014A62F /* UserViewController.swift */; };
@@ -51,6 +49,7 @@
 		7089B70424DD4B87009E6BEE /* JSRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6F524DD4B17009E6BEE /* JSRepresentable.swift */; };
 		7089B71124DD5561009E6BEE /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B6F624DD4B17009E6BEE /* DomainConvertibleType.swift */; };
 		7089B71324DDA12B009E6BEE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7089B71224DDA12B009E6BEE /* User.swift */; };
+		70A26F3A26C50D7700114729 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 70A26F3926C50D7700114729 /* Swinject */; };
 		70C0061F24E13B9D0036AFAB /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0061E24E13B9D0036AFAB /* UseCase.swift */; };
 		70C0062224E13BDC0036AFAB /* CreateUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062124E13BDC0036AFAB /* CreateUserUseCase.swift */; };
 		70C0062524E13C1C0036AFAB /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C0062424E13C1C0036AFAB /* UserRepository.swift */; };
@@ -192,7 +191,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				7089B6DC24DD4ACF009E6BEE /* Data.framework in Embed Frameworks */,
-				708563FE24E1AB3B0014A62F /* Swinject.framework in Embed Frameworks */,
 				70C0064A24E1486B0036AFAB /* JSPlatform.framework in Embed Frameworks */,
 				70C68F8A24D456520009DFC6 /* Domain.framework in Embed Frameworks */,
 			);
@@ -344,9 +342,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7089B6DB24DD4ACF009E6BEE /* Data.framework in Frameworks */,
-				708563FD24E1AB3B0014A62F /* Swinject.framework in Frameworks */,
 				70C0064924E1486B0036AFAB /* JSPlatform.framework in Frameworks */,
 				70C68F8924D456520009DFC6 /* Domain.framework in Frameworks */,
+				70A26F3A26C50D7700114729 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,6 +909,9 @@
 				70C0064824E1486B0036AFAB /* PBXTargetDependency */,
 			);
 			name = MacroApp;
+			packageProductDependencies = (
+				70A26F3926C50D7700114729 /* Swinject */,
+			);
 			productName = MacroApp;
 			productReference = 70F6477A24BDB2500081A3F6 /* MacroApp.app */;
 			productType = "com.apple.product-type.application";
@@ -984,6 +985,9 @@
 				Base,
 			);
 			mainGroup = 70F6477124BDB2500081A3F6;
+			packageReferences = (
+				70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 70F6477B24BDB2500081A3F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -2805,6 +2809,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70A26F3926C50D7700114729 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 70F6477224BDB2500081A3F6 /* Project object */;
 }

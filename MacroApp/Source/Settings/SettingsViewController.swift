@@ -1,7 +1,7 @@
 import UIKit
 import Swinject
 
-protocol SettingsViewControllerDelegate: class {
+protocol SettingsViewControllerDelegate: AnyObject {
     func didPressUserButton(userId: Int)
     func didTapClose()
 }

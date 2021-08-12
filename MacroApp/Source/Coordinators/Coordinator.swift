@@ -6,11 +6,11 @@ enum CoordinatorArgumentKey {
     case argument2
 }
 
-protocol CoordinatorDelegate: class {
+protocol CoordinatorDelegate: AnyObject {
     func didFinish(coordinator: Coordinator, arguments: [CoordinatorArgumentKey: Any]?)
 }
 
-protocol Coordinator: class {
+protocol Coordinator: AnyObject {
 
     var childCoordinators: [Coordinator] { get set }
 

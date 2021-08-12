@@ -22,10 +22,10 @@ public final class UserRepositoryImpl: Domain.UserRepository {
             }
             completion(newResult)
         }
-        return userService.newUser(name: name, password: password, completion: newClosure)
+        userService.newUser(name: name, password: password, completion: newClosure)
     }
     
     public func delete(id: Int, completion: @escaping (Result<Void, Error>) -> Void) {
-        return userService.deleteUser(id: id, completion: completion)
+        userService.deleteUser(id: id, completion: completion)
     }
 }

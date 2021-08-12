@@ -1,7 +1,7 @@
 import UIKit
 import Swinject
 
-protocol InitialViewControllerDelegate: class {
+protocol InitialViewControllerDelegate: AnyObject {
     func didTapSettingsButton()
 }
 
