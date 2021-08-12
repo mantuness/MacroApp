@@ -1,7 +1,7 @@
 import UIKit
 import Swinject
 
-protocol UserViewControllerDelegate: class {
+protocol UserViewControllerDelegate: AnyObject {
     func goBack()
 }
 
