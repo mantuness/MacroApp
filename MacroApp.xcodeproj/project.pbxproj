@@ -202,7 +202,6 @@
 /* Begin PBXFileReference section */
 		707408B924F95AF100E72281 /* JSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSError.swift; sourceTree = "<group>"; };
 		708563FB24E1A9940014A62F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		708563FC24E1AB3B0014A62F /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		708563FF24E1ABE50014A62F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		7085640124E1B0250014A62F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		7085640724E1B79B0014A62F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -486,14 +485,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		7089B6AD24DCAA43009E6BEE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				708563FC24E1AB3B0014A62F /* Swinject.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		7089B6C724DD4ACF009E6BEE /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,7 +657,6 @@
 				70C0063524E1486B0036AFAB /* JSPlatform */,
 				70C0064224E1486B0036AFAB /* JSPlatformTests */,
 				70F6477B24BDB2500081A3F6 /* Products */,
-				7089B6AD24DCAA43009E6BEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2804,7 +2794,7 @@
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
 				kind = exactVersion;
-				version = 2.7.1;
+				version = 2.8.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
