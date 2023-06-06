@@ -60,11 +60,12 @@ final class SettingsViewController: UIViewController {
 }
 
 final class SettingsViewControllerFactory {
-    private let viewModelProvider: Provider<SettingsViewModel>
-    init(viewModelProvider: Provider<SettingsViewModel>) {
+    private let viewModelProvider: any Resolver<SettingsViewModel>
+    init(viewModelProvider: any Resolver<SettingsViewModel>) {
         self.viewModelProvider = viewModelProvider
     }
     func create(delegate: SettingsViewControllerDelegate) -> SettingsViewController {
-        return SettingsViewController(viewModel: viewModelProvider.instance, delegate: delegate)
+        return SettingsViewController(viewModel: viewModelProvider.getInstance(), delegate: delegate)
     }
 }
+

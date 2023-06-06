@@ -29,11 +29,11 @@ final class InitialViewController: UIViewController {
 }
 
 final class InitialViewControllerFactory {
-    private let viewModelProvider: Provider<InitialViewModel>
-    init(viewModelProvider: Provider<InitialViewModel>) {
+    private let viewModelProvider: any Resolver<InitialViewModel>
+    init(viewModelProvider: any Resolver<InitialViewModel>) {
         self.viewModelProvider = viewModelProvider
     }
     func create(delegate: InitialViewControllerDelegate) -> InitialViewController {
-        return InitialViewController(viewModel: viewModelProvider.instance, delegate: delegate)
+        return InitialViewController(viewModel: viewModelProvider.getInstance(), delegate: delegate)
     }
 }

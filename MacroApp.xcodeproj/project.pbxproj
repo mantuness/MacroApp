@@ -75,6 +75,17 @@
 		70C68F8624D456520009DFC6 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C68F7624D456520009DFC6 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70C68F8924D456520009DFC6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C68F7424D456520009DFC6 /* Domain.framework */; };
 		70C68F8A24D456520009DFC6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70C68F7424D456520009DFC6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		70D2687B2A2F8CE60020B538 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 70D2687A2A2F8CE60020B538 /* Factory */; };
+		70D268862A2FB8240020B538 /* Coordinator_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268812A2FB8240020B538 /* Coordinator_Factory.swift */; };
+		70D268872A2FB8240020B538 /* UseCase_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268822A2FB8240020B538 /* UseCase_Factory.swift */; };
+		70D268882A2FB8240020B538 /* ViewModel_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268842A2FB8240020B538 /* ViewModel_Factory.swift */; };
+		70D268892A2FB8240020B538 /* Client_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268852A2FB8240020B538 /* Client_Factory.swift */; };
+		70D2688A2A2FB8240020B538 /* Repository_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2687F2A2FB8240020B538 /* Repository_Factory.swift */; };
+		70D2688B2A2FB8240020B538 /* Services_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268832A2FB8240020B538 /* Services_Factory.swift */; };
+		70D2688C2A2FB8240020B538 /* ViewController_Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268802A2FB8240020B538 /* ViewController_Factory.swift */; };
+		70D2688E2A2FCE060020B538 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D2688D2A2FCE060020B538 /* Resolver.swift */; };
+		70D268922A2FCEB60020B538 /* Provider+Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268912A2FCEB60020B538 /* Provider+Resolver.swift */; };
+		70D268942A2FCEC20020B538 /* Factory+Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D268932A2FCEC20020B538 /* Factory+Resolver.swift */; };
 		70F6477E24BDB2500081A3F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6477D24BDB2500081A3F6 /* AppDelegate.swift */; };
 		70F6478024BDB2500081A3F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6477F24BDB2500081A3F6 /* SceneDelegate.swift */; };
 		70F6478224BDB2500081A3F6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6478124BDB2500081A3F6 /* SettingsViewController.swift */; };
@@ -269,6 +280,16 @@
 		70C68F7C24D456520009DFC6 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C68F8324D456520009DFC6 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		70C68F8524D456520009DFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70D2687F2A2FB8240020B538 /* Repository_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository_Factory.swift; sourceTree = "<group>"; };
+		70D268802A2FB8240020B538 /* ViewController_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Factory.swift; sourceTree = "<group>"; };
+		70D268812A2FB8240020B538 /* Coordinator_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator_Factory.swift; sourceTree = "<group>"; };
+		70D268822A2FB8240020B538 /* UseCase_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase_Factory.swift; sourceTree = "<group>"; };
+		70D268832A2FB8240020B538 /* Services_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services_Factory.swift; sourceTree = "<group>"; };
+		70D268842A2FB8240020B538 /* ViewModel_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel_Factory.swift; sourceTree = "<group>"; };
+		70D268852A2FB8240020B538 /* Client_Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client_Factory.swift; sourceTree = "<group>"; };
+		70D2688D2A2FCE060020B538 /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		70D268912A2FCEB60020B538 /* Provider+Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Provider+Resolver.swift"; sourceTree = "<group>"; };
+		70D268932A2FCEC20020B538 /* Factory+Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Factory+Resolver.swift"; sourceTree = "<group>"; };
 		70F6477A24BDB2500081A3F6 /* MacroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F6477D24BDB2500081A3F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70F6477F24BDB2500081A3F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -341,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7089B6DB24DD4ACF009E6BEE /* Data.framework in Frameworks */,
+				70D2687B2A2F8CE60020B538 /* Factory in Frameworks */,
 				70C0064924E1486B0036AFAB /* JSPlatform.framework in Frameworks */,
 				70C68F8924D456520009DFC6 /* Domain.framework in Frameworks */,
 				70A26F3A26C50D7700114729 /* Swinject in Frameworks */,
@@ -428,8 +450,9 @@
 		7085643C24E34E410014A62F /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				7085643A24E2FD520014A62F /* Application.swift */,
-				7085643D24E34E4B0014A62F /* Assemblies */,
+				70D2688D2A2FCE060020B538 /* Resolver.swift */,
+				70D2688F2A2FCE6A0020B538 /* Swinject */,
+				70D268902A2FCE710020B538 /* Factory */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -644,6 +667,46 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
+		70D2687C2A2F8CF00020B538 /* DI_Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI_Factory;
+			sourceTree = "<group>";
+		};
+		70D2688F2A2FCE6A0020B538 /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+				70D268912A2FCEB60020B538 /* Provider+Resolver.swift */,
+				7085643A24E2FD520014A62F /* Application.swift */,
+				7085643D24E34E4B0014A62F /* Assemblies */,
+			);
+			path = Swinject;
+			sourceTree = "<group>";
+		};
+		70D268902A2FCE710020B538 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				70D268932A2FCEC20020B538 /* Factory+Resolver.swift */,
+				70D268952A2FCECD0020B538 /* Registration */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		70D268952A2FCECD0020B538 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				70D268842A2FB8240020B538 /* ViewModel_Factory.swift */,
+				70D268822A2FB8240020B538 /* UseCase_Factory.swift */,
+				70D2687F2A2FB8240020B538 /* Repository_Factory.swift */,
+				70D268832A2FB8240020B538 /* Services_Factory.swift */,
+				70D268852A2FB8240020B538 /* Client_Factory.swift */,
+				70D268812A2FB8240020B538 /* Coordinator_Factory.swift */,
+				70D268802A2FB8240020B538 /* ViewController_Factory.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		70F6477124BDB2500081A3F6 = {
 			isa = PBXGroup;
 			children = (
@@ -681,8 +744,9 @@
 				70F6477D24BDB2500081A3F6 /* AppDelegate.swift */,
 				70F6477F24BDB2500081A3F6 /* SceneDelegate.swift */,
 				7085643C24E34E410014A62F /* DI */,
-				70F6479F24BDB3150081A3F6 /* Source */,
+				70D2687C2A2F8CF00020B538 /* DI_Factory */,
 				70F647A124BDB36A0081A3F6 /* Resources */,
+				70F6479F24BDB3150081A3F6 /* Source */,
 				70F647A224BDB3960081A3F6 /* SupportingFiles */,
 			);
 			path = MacroApp;
@@ -901,6 +965,7 @@
 			name = MacroApp;
 			packageProductDependencies = (
 				70A26F3926C50D7700114729 /* Swinject */,
+				70D2687A2A2F8CE60020B538 /* Factory */,
 			);
 			productName = MacroApp;
 			productReference = 70F6477A24BDB2500081A3F6 /* MacroApp.app */;
@@ -977,6 +1042,7 @@
 			mainGroup = 70F6477124BDB2500081A3F6;
 			packageReferences = (
 				70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */,
+				70D268792A2F8CE60020B538 /* XCRemoteSwiftPackageReference "Factory" */,
 			);
 			productRefGroup = 70F6477B24BDB2500081A3F6 /* Products */;
 			projectDirPath = "";
@@ -1137,12 +1203,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70D268942A2FCEC20020B538 /* Factory+Resolver.swift in Sources */,
 				7085644B24E35A120014A62F /* ViewControllerAssembly.swift in Sources */,
+				70D268872A2FB8240020B538 /* UseCase_Factory.swift in Sources */,
+				70D2688C2A2FB8240020B538 /* ViewController_Factory.swift in Sources */,
 				7085643B24E2FD520014A62F /* Application.swift in Sources */,
 				7085640224E1B0250014A62F /* AppCoordinator.swift in Sources */,
+				70D2688A2A2FB8240020B538 /* Repository_Factory.swift in Sources */,
 				7085643F24E34E7D0014A62F /* ViewModelAssembly.swift in Sources */,
 				7085640E24E1FE750014A62F /* InitialViewController.swift in Sources */,
+				70D268892A2FB8240020B538 /* Client_Factory.swift in Sources */,
+				70D2688E2A2FCE060020B538 /* Resolver.swift in Sources */,
+				70D268882A2FB8240020B538 /* ViewModel_Factory.swift in Sources */,
+				70D2688B2A2FB8240020B538 /* Services_Factory.swift in Sources */,
 				7085644324E352D30014A62F /* RepositoryAssembly.swift in Sources */,
+				70D268862A2FB8240020B538 /* Coordinator_Factory.swift in Sources */,
 				7085644524E354840014A62F /* ServicesAssembly.swift in Sources */,
 				7085644924E3586F0014A62F /* CoordinatorAssembly.swift in Sources */,
 				7085643424E2AA600014A62F /* Coordinator.swift in Sources */,
@@ -1155,6 +1230,7 @@
 				7085640024E1ABE50014A62F /* SettingsViewModel.swift in Sources */,
 				7085640924E1B79B0014A62F /* UserViewController.swift in Sources */,
 				7085641324E1FF3F0014A62F /* UserViewModel.swift in Sources */,
+				70D268922A2FCEB60020B538 /* Provider+Resolver.swift in Sources */,
 				7085641124E1FEB30014A62F /* InitialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2797,6 +2873,14 @@
 				version = 2.8.3;
 			};
 		};
+		70D268792A2F8CE60020B538 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2804,6 +2888,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		70D2687A2A2F8CE60020B538 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70D268792A2F8CE60020B538 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

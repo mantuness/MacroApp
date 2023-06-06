@@ -1,6 +1,7 @@
 import Foundation
 import Domain
 import Swinject
+import Factory
 
 final class UserViewModel {
     private let createUserUseCase: Domain.CreateUserUseCase
@@ -19,20 +20,20 @@ final class UserViewModel {
 }
 
 final class UserViewModelFactory {
-    private let createUserProvider: Provider<CreateUserUseCase>
-    private let deleteUserUseCaseProvider: Provider<DeleteUserUseCase>
-    private let getUserUseCaseProvider: Provider<GetUserUseCase>
-    init(createUserProvider: Provider<CreateUserUseCase>,
-         deleteUserUseCaseProvider: Provider<DeleteUserUseCase>,
-         getUserUseCaseProvider: Provider<GetUserUseCase>) {
+    private let createUserProvider: any Resolver<CreateUserUseCase>
+    private let deleteUserUseCaseProvider: any Resolver<DeleteUserUseCase>
+    private let getUserUseCaseProvider: any Resolver<GetUserUseCase>
+    init(createUserProvider: any Resolver<CreateUserUseCase>,
+         deleteUserUseCaseProvider: any Resolver<DeleteUserUseCase>,
+         getUserUseCaseProvider: any Resolver<GetUserUseCase>) {
         self.createUserProvider = createUserProvider
         self.deleteUserUseCaseProvider = deleteUserUseCaseProvider
         self.getUserUseCaseProvider = getUserUseCaseProvider
     }
     func create(id: Int) -> UserViewModel {
-        return UserViewModel(createUserUseCase: createUserProvider.instance,
-                             deleteUserUseCase: deleteUserUseCaseProvider.instance,
-                             getUserUseCase: getUserUseCaseProvider.instance,
+        return UserViewModel(createUserUseCase: createUserProvider.getInstance(),
+                             deleteUserUseCase: deleteUserUseCaseProvider.getInstance(),
+                             getUserUseCase: getUserUseCaseProvider.getInstance(),
                              id: id)
     }
 }
