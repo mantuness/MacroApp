@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -667,13 +667,6 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
-		70D2687C2A2F8CF00020B538 /* DI_Factory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DI_Factory;
-			sourceTree = "<group>";
-		};
 		70D2688F2A2FCE6A0020B538 /* Swinject */ = {
 			isa = PBXGroup;
 			children = (
@@ -744,7 +737,6 @@
 				70F6477D24BDB2500081A3F6 /* AppDelegate.swift */,
 				70F6477F24BDB2500081A3F6 /* SceneDelegate.swift */,
 				7085643C24E34E410014A62F /* DI */,
-				70D2687C2A2F8CF00020B538 /* DI_Factory */,
 				70F647A124BDB36A0081A3F6 /* Resources */,
 				70F6479F24BDB3150081A3F6 /* Source */,
 				70F647A224BDB3960081A3F6 /* SupportingFiles */,
