@@ -17,12 +17,22 @@ final class UserViewModel {
         self.getUserUseCase = getUserUseCase
         self.id = id
     }
+
+    static func make(with id: Int) -> UserViewModel {
+        UserViewModel(
+            createUserUseCase: MDIDependency.resolve(),
+            deleteUserUseCase: MDIDependency.resolve(),
+            getUserUseCase: MDIDependency.resolve(),
+            id: id
+        )
+    }
 }
 
 final class UserViewModelFactory {
     private let createUserProvider: any Resolver<CreateUserUseCase>
     private let deleteUserUseCaseProvider: any Resolver<DeleteUserUseCase>
     private let getUserUseCaseProvider: any Resolver<GetUserUseCase>
+
     init(createUserProvider: any Resolver<CreateUserUseCase>,
          deleteUserUseCaseProvider: any Resolver<DeleteUserUseCase>,
          getUserUseCaseProvider: any Resolver<GetUserUseCase>) {
@@ -30,6 +40,7 @@ final class UserViewModelFactory {
         self.deleteUserUseCaseProvider = deleteUserUseCaseProvider
         self.getUserUseCaseProvider = getUserUseCaseProvider
     }
+
     func create(id: Int) -> UserViewModel {
         return UserViewModel(createUserUseCase: createUserProvider.getInstance(),
                              deleteUserUseCase: deleteUserUseCaseProvider.getInstance(),

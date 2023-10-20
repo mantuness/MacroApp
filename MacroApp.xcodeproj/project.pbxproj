@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -93,6 +93,8 @@
 		70F6478A24BDB2520081A3F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F6478824BDB2520081A3F6 /* LaunchScreen.storyboard */; };
 		70F6479524BDB2530081A3F6 /* MacroAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6479424BDB2530081A3F6 /* MacroAppTests.swift */; };
 		70F647B924BDB7D00081A3F6 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F647B824BDB7D00081A3F6 /* SettingsViewController.xib */; };
+		EBA0ED012AE1A3C800DFE35C /* MDIDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0ED002AE1A3C800DFE35C /* MDIDependency.swift */; };
+		EBA0ED072AE1A49700DFE35C /* MDI in Frameworks */ = {isa = PBXBuildFile; productRef = EBA0ED062AE1A49700DFE35C /* MDI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -307,6 +309,7 @@
 		70F647AA24BDB47D0081A3F6 /* calabash_release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = calabash_release.xcconfig; sourceTree = "<group>"; };
 		70F647AB24BDB4820081A3F6 /* calabash_debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = calabash_debug.xcconfig; sourceTree = "<group>"; };
 		70F647B824BDB7D00081A3F6 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		EBA0ED002AE1A3C800DFE35C /* MDIDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDIDependency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +367,7 @@
 				7089B6DB24DD4ACF009E6BEE /* Data.framework in Frameworks */,
 				70D2687B2A2F8CE60020B538 /* Factory in Frameworks */,
 				70C0064924E1486B0036AFAB /* JSPlatform.framework in Frameworks */,
+				EBA0ED072AE1A49700DFE35C /* MDI in Frameworks */,
 				70C68F8924D456520009DFC6 /* Domain.framework in Frameworks */,
 				70A26F3A26C50D7700114729 /* Swinject in Frameworks */,
 			);
@@ -450,6 +454,7 @@
 		7085643C24E34E410014A62F /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				EBA0ECFF2AE1A3C000DFE35C /* MDI */,
 				70D2688D2A2FCE060020B538 /* Resolver.swift */,
 				70D2688F2A2FCE6A0020B538 /* Swinject */,
 				70D268902A2FCE710020B538 /* Factory */,
@@ -667,6 +672,13 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
+		70D2687C2A2F8CF00020B538 /* DI_Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI_Factory;
+			sourceTree = "<group>";
+		};
 		70D2688F2A2FCE6A0020B538 /* Swinject */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +725,7 @@
 				70C0063524E1486B0036AFAB /* JSPlatform */,
 				70C0064224E1486B0036AFAB /* JSPlatformTests */,
 				70F6477B24BDB2500081A3F6 /* Products */,
+				EBA0ED022AE1A3EC00DFE35C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -737,6 +750,7 @@
 				70F6477D24BDB2500081A3F6 /* AppDelegate.swift */,
 				70F6477F24BDB2500081A3F6 /* SceneDelegate.swift */,
 				7085643C24E34E410014A62F /* DI */,
+				70D2687C2A2F8CF00020B538 /* DI_Factory */,
 				70F647A124BDB36A0081A3F6 /* Resources */,
 				70F6479F24BDB3150081A3F6 /* Source */,
 				70F647A224BDB3960081A3F6 /* SupportingFiles */,
@@ -791,6 +805,21 @@
 				7089B6A224DC0484009E6BEE /* prd */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EBA0ECFF2AE1A3C000DFE35C /* MDI */ = {
+			isa = PBXGroup;
+			children = (
+				EBA0ED002AE1A3C800DFE35C /* MDIDependency.swift */,
+			);
+			path = MDI;
+			sourceTree = "<group>";
+		};
+		EBA0ED022AE1A3EC00DFE35C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -958,6 +987,7 @@
 			packageProductDependencies = (
 				70A26F3926C50D7700114729 /* Swinject */,
 				70D2687A2A2F8CE60020B538 /* Factory */,
+				EBA0ED062AE1A49700DFE35C /* MDI */,
 			);
 			productName = MacroApp;
 			productReference = 70F6477A24BDB2500081A3F6 /* MacroApp.app */;
@@ -1035,6 +1065,7 @@
 			packageReferences = (
 				70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */,
 				70D268792A2F8CE60020B538 /* XCRemoteSwiftPackageReference "Factory" */,
+				EBA0ED052AE1A49700DFE35C /* XCLocalSwiftPackageReference "MDI" */,
 			);
 			productRefGroup = 70F6477B24BDB2500081A3F6 /* Products */;
 			projectDirPath = "";
@@ -1212,6 +1243,7 @@
 				70D268862A2FB8240020B538 /* Coordinator_Factory.swift in Sources */,
 				7085644524E354840014A62F /* ServicesAssembly.swift in Sources */,
 				7085644924E3586F0014A62F /* CoordinatorAssembly.swift in Sources */,
+				EBA0ED012AE1A3C800DFE35C /* MDIDependency.swift in Sources */,
 				7085643424E2AA600014A62F /* Coordinator.swift in Sources */,
 				70F6478224BDB2500081A3F6 /* SettingsViewController.swift in Sources */,
 				7085644724E3566E0014A62F /* ClientAssembly.swift in Sources */,
@@ -2263,6 +2295,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2283,6 +2316,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2406,6 +2440,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2502,6 +2537,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2604,6 +2640,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2700,6 +2737,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SQJJLV44P2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/MacroApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2856,6 +2894,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		EBA0ED052AE1A49700DFE35C /* XCLocalSwiftPackageReference "MDI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = MDI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -2885,6 +2930,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 70D268792A2F8CE60020B538 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
+		};
+		EBA0ED062AE1A49700DFE35C /* MDI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MDI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
