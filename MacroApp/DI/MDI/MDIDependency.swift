@@ -15,7 +15,6 @@ extension MDIDependency { }
 @AutoRegister(ViewModelProvider.self, factory: ViewModelProvider.init)
 @AutoRegister((any InitialViewControllerFactory).self, factory: MDIInitialViewControllerFactory.init(viewModelProvider:))
 @AutoRegister((any SettingsViewControllerFactory).self, factory: MDISettingsViewControllerFactory.init)
-//@AutoRegister((any UserViewModelFactory).self, factory: MDIUserViewModelFactory.init)
 @AutoRegister((any UserViewControllerFactory).self, factory: MDIUserViewControllerFactory.init)
 @AutoRegister(MyAccountCoordinatorFactory.self, factory: MyAccountCoordinatorFactory.init(userViewControllerFactory:settingsViewControllerFactory:))
 @AutoRegister(AppCoordinatorFactory.self, factory: AppCoordinatorFactory.init(initialViewControllerFactory:myAccountCoordinatorFactory:))
