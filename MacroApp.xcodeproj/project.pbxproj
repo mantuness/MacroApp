@@ -454,8 +454,8 @@
 		7085643C24E34E410014A62F /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				EBA0ECFF2AE1A3C000DFE35C /* MDI */,
 				70D2688D2A2FCE060020B538 /* Resolver.swift */,
+				EBA0ECFF2AE1A3C000DFE35C /* MDI */,
 				70D2688F2A2FCE6A0020B538 /* Swinject */,
 				70D268902A2FCE710020B538 /* Factory */,
 			);
@@ -672,13 +672,6 @@
 			path = DomainTests;
 			sourceTree = "<group>";
 		};
-		70D2687C2A2F8CF00020B538 /* DI_Factory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DI_Factory;
-			sourceTree = "<group>";
-		};
 		70D2688F2A2FCE6A0020B538 /* Swinject */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,7 +743,6 @@
 				70F6477D24BDB2500081A3F6 /* AppDelegate.swift */,
 				70F6477F24BDB2500081A3F6 /* SceneDelegate.swift */,
 				7085643C24E34E410014A62F /* DI */,
-				70D2687C2A2F8CF00020B538 /* DI_Factory */,
 				70F647A124BDB36A0081A3F6 /* Resources */,
 				70F6479F24BDB3150081A3F6 /* Source */,
 				70F647A224BDB3960081A3F6 /* SupportingFiles */,

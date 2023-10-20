@@ -17,7 +17,7 @@ extension MDIDependency { }
 @AutoRegister((any SettingsViewControllerFactory).self, factory: MDISettingsViewControllerFactory.init)
 @AutoRegister((any UserViewControllerFactory).self, factory: MDIUserViewControllerFactory.init)
 @AutoRegister(MyAccountCoordinatorFactory.self, factory: MyAccountCoordinatorFactory.init(userViewControllerFactory:settingsViewControllerFactory:))
-@AutoRegister(AppCoordinatorFactory.self, factory: AppCoordinatorFactory.init(initialViewControllerFactory:myAccountCoordinatorFactory:))
+@FactoryRegister(AppCoordinator.self, parameterTypes: UIWindow.self, (any CoordinatorDelegate).self, factory: AppCoordinator.make(window:coordinatorDelegate:))
 extension MDIDependency { }
 
 @AutoRegister((any AppRepository).self, factory: AppRepositoryImpl.init(appService:))
