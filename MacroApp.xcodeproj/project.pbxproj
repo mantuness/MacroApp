@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -95,6 +95,7 @@
 		70F647B924BDB7D00081A3F6 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F647B824BDB7D00081A3F6 /* SettingsViewController.xib */; };
 		EBA0ED012AE1A3C800DFE35C /* MDIDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA0ED002AE1A3C800DFE35C /* MDIDependency.swift */; };
 		EBA0ED072AE1A49700DFE35C /* MDI in Frameworks */ = {isa = PBXBuildFile; productRef = EBA0ED062AE1A49700DFE35C /* MDI */; };
+		EBD1AAC92AE4800A006811E6 /* MDI in Frameworks */ = {isa = PBXBuildFile; productRef = EBD1AAC82AE4800A006811E6 /* MDI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -365,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7089B6DB24DD4ACF009E6BEE /* Data.framework in Frameworks */,
+				EBD1AAC92AE4800A006811E6 /* MDI in Frameworks */,
 				70D2687B2A2F8CE60020B538 /* Factory in Frameworks */,
 				70C0064924E1486B0036AFAB /* JSPlatform.framework in Frameworks */,
 				EBA0ED072AE1A49700DFE35C /* MDI in Frameworks */,
@@ -980,6 +982,7 @@
 				70A26F3926C50D7700114729 /* Swinject */,
 				70D2687A2A2F8CE60020B538 /* Factory */,
 				EBA0ED062AE1A49700DFE35C /* MDI */,
+				EBD1AAC82AE4800A006811E6 /* MDI */,
 			);
 			productName = MacroApp;
 			productReference = 70F6477A24BDB2500081A3F6 /* MacroApp.app */;
@@ -1057,7 +1060,7 @@
 			packageReferences = (
 				70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */,
 				70D268792A2F8CE60020B538 /* XCRemoteSwiftPackageReference "Factory" */,
-				EBA0ED052AE1A49700DFE35C /* XCLocalSwiftPackageReference "MDI" */,
+				EBD1AAC72AE4800A006811E6 /* XCRemoteSwiftPackageReference "MDI" */,
 			);
 			productRefGroup = 70F6477B24BDB2500081A3F6 /* Products */;
 			projectDirPath = "";
@@ -2886,13 +2889,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		EBA0ED052AE1A49700DFE35C /* XCLocalSwiftPackageReference "MDI" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = MDI;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		70A26F3826C50D7700114729 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -2910,6 +2906,14 @@
 				version = 2.1.5;
 			};
 		};
+		EBD1AAC72AE4800A006811E6 /* XCRemoteSwiftPackageReference "MDI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/renato-iar/MDI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2925,6 +2929,11 @@
 		};
 		EBA0ED062AE1A49700DFE35C /* MDI */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = MDI;
+		};
+		EBD1AAC82AE4800A006811E6 /* MDI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBD1AAC72AE4800A006811E6 /* XCRemoteSwiftPackageReference "MDI" */;
 			productName = MDI;
 		};
 /* End XCSwiftPackageProductDependency section */

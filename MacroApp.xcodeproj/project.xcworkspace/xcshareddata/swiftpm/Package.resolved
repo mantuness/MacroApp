@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "mdi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/renato-iar/MDI.git",
+      "state" : {
+        "revision" : "60d833c96efaf886d4551a34e1fad88120a06050",
+        "version" : "2.2.0"
+      }
+    },
+    {
       "identity" : "swift-syntax",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax.git",
