@@ -3,7 +3,9 @@ import Domain
 import JSPlatform
 import MDI
 
-class MDIDependency { }
+struct MDIDependency {
+    private init() { }
+}
 
 @SingletonRegister((any JSClient).self, factory: JSClientImpl.init)
 @AutoRegister((any UserService).self, factory: JSUserService.init(client:))
@@ -11,13 +13,15 @@ class MDIDependency { }
 extension MDIDependency { }
 
 @FactoryRegister(UserViewModel.self, parameterTypes: Int.self, factory: UserViewModel.make(with:))
+@FactoryRegister(AppCoordinator.self, parameterTypes: UIWindow.self, (any CoordinatorDelegate).self, factory: AppCoordinator.make(window:coordinatorDelegate:))
 @AutoRegister(SettingsViewModel.self, factory: SettingsViewModel.init(getFFUseCase:setFFValueUseCase:getConfigsUseCase:validateUserIdUseCase:))
 @AutoRegister(ViewModelProvider.self, factory: ViewModelProvider.init)
+extension MDIDependency { }
+
 @AutoRegister((any InitialViewControllerFactory).self, factory: MDIInitialViewControllerFactory.init(viewModelProvider:))
 @AutoRegister((any SettingsViewControllerFactory).self, factory: MDISettingsViewControllerFactory.init)
 @AutoRegister((any UserViewControllerFactory).self, factory: MDIUserViewControllerFactory.init)
 @AutoRegister(MyAccountCoordinatorFactory.self, factory: MyAccountCoordinatorFactory.init(userViewControllerFactory:settingsViewControllerFactory:))
-@FactoryRegister(AppCoordinator.self, parameterTypes: UIWindow.self, (any CoordinatorDelegate).self, factory: AppCoordinator.make(window:coordinatorDelegate:))
 extension MDIDependency { }
 
 @AutoRegister((any AppRepository).self, factory: AppRepositoryImpl.init(appService:))
