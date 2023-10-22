@@ -2911,7 +2911,7 @@
 			repositoryURL = "https://github.com/renato-iar/MDI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

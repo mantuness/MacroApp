@@ -47,7 +47,7 @@ final class FactoryUserViewControllerFactory: UserViewControllerFactory {
 final class MDIUserViewControllerFactory: UserViewControllerFactory {
     func create(id: Int, delegate: UserViewControllerDelegate) -> UserViewController {
         UserViewController(
-            viewModel: MDIDependency.resolve(UserViewModel.self, id),
+            viewModel: MDIDependency.resolve(UserViewModel.self, id: id),
             delegate: delegate
         )
     }

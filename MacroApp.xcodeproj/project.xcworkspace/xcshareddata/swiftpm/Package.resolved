@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/renato-iar/MDI.git",
       "state" : {
-        "revision" : "60d833c96efaf886d4551a34e1fad88120a06050",
-        "version" : "2.2.0"
+        "revision" : "b25d1bd844359a08b2e23989be640ef4d5734253",
+        "version" : "4.0.0"
       }
     },
     {

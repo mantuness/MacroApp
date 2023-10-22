@@ -1,3 +1,4 @@
+import Domain
 import UIKit
 import Swinject
 
@@ -31,8 +32,8 @@ final class InitialViewController: UIViewController {
 final class ViewModelProvider {
     func make() -> InitialViewModel {
         InitialViewModel(
-            getConfigsUseCase: MDIDependency.resolve(),
-            getFFUseCase: MDIDependency.resolve()
+            getConfigsUseCase: MDIDependency.resolve(GetConfigsUseCase.self),
+            getFFUseCase: MDIDependency.resolve(GetFeatureFlagsUseCase.self)
         )
     }
 }

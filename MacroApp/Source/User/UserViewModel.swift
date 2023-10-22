@@ -20,9 +20,9 @@ final class UserViewModel {
 
     static func make(with id: Int) -> UserViewModel {
         UserViewModel(
-            createUserUseCase: MDIDependency.resolve(),
-            deleteUserUseCase: MDIDependency.resolve(),
-            getUserUseCase: MDIDependency.resolve(),
+            createUserUseCase: MDIDependency.resolve(CreateUserUseCase.self),
+            deleteUserUseCase: MDIDependency.resolve(DeleteUserUseCase.self),
+            getUserUseCase: MDIDependency.resolve(GetUserUseCase.self),
             id: id
         )
     }
