@@ -59,7 +59,11 @@ final class SettingsViewController: UIViewController {
     }
 }
 
-final class SettingsViewControllerFactory {
+protocol SettingsViewControllerFactory {
+    func create(delegate: SettingsViewControllerDelegate) -> SettingsViewController
+}
+
+final class ResolverSettingsViewControllerFactory: SettingsViewControllerFactory {
     private let viewModelProvider: any Resolver<SettingsViewModel>
     init(viewModelProvider: any Resolver<SettingsViewModel>) {
         self.viewModelProvider = viewModelProvider
@@ -69,3 +73,11 @@ final class SettingsViewControllerFactory {
     }
 }
 
+final class MDISettingsViewControllerFactory: SettingsViewControllerFactory {
+    func create(delegate: SettingsViewControllerDelegate) -> SettingsViewController {
+        SettingsViewController(
+            viewModel: MDIDependency.resolve(),
+            delegate: delegate
+        )
+    }
+}

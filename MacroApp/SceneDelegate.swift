@@ -21,9 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //        let appCoordinatorFactory = Application.shared.resolve(AppCoordinatorFactory.self)
         
         // -- FACTORY --
-        let appCoordinatorFactory = Container.shared.appCoordinatorFactory.resolve()
-        
-        appCoordinator = appCoordinatorFactory.create(window: window, coordinatorDelegate: self)
+        //        let appCoordinatorFactory = Container.shared.appCoordinatorFactory.resolve()
+
+        // -- MDI --
+        appCoordinator = MDIDependency.resolve(AppCoordinator.self, window: window, coordinatorDelegate: self)
         appCoordinator?.execute()
     }
     

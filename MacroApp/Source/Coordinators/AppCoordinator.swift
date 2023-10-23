@@ -38,6 +38,15 @@ extension AppCoordinator: InitialViewControllerDelegate {
         addChildCoordinator(myAccountCoordinator)
         myAccountCoordinator.execute()
     }
+
+    static func make(window: UIWindow, coordinatorDelegate delegate: CoordinatorDelegate) -> AppCoordinator {
+        AppCoordinator(
+            window: window,
+            initialViewControllerFactory: MDIDependency.resolve(InitialViewControllerFactory.self),
+            myAccountCoordinatorFactory: MDIDependency.resolve(MyAccountCoordinatorFactory.self),
+            delegate: delegate
+        )
+    }
 }
 
 

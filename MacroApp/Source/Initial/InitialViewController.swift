@@ -1,3 +1,4 @@
+import Domain
 import UIKit
 import Swinject
 
@@ -28,12 +29,41 @@ final class InitialViewController: UIViewController {
     }
 }
 
-final class InitialViewControllerFactory {
+final class ViewModelProvider {
+    func make() -> InitialViewModel {
+        InitialViewModel(
+            getConfigsUseCase: MDIDependency.resolve(GetConfigsUseCase.self),
+            getFFUseCase: MDIDependency.resolve(GetFeatureFlagsUseCase.self)
+        )
+    }
+}
+
+protocol InitialViewControllerFactory {
+    func create(delegate: InitialViewControllerDelegate) -> InitialViewController
+}
+
+final class ResolverInitialViewControllerFactory: InitialViewControllerFactory {
     private let viewModelProvider: any Resolver<InitialViewModel>
     init(viewModelProvider: any Resolver<InitialViewModel>) {
         self.viewModelProvider = viewModelProvider
     }
+
     func create(delegate: InitialViewControllerDelegate) -> InitialViewController {
         return InitialViewController(viewModel: viewModelProvider.getInstance(), delegate: delegate)
+    }
+}
+
+final class MDIInitialViewControllerFactory: InitialViewControllerFactory {
+    private let viewModelProvider: ViewModelProvider
+
+    init(viewModelProvider: ViewModelProvider) {
+        self.viewModelProvider = viewModelProvider
+    }
+
+    func create(delegate: InitialViewControllerDelegate) -> InitialViewController {
+        InitialViewController(
+            viewModel: viewModelProvider.make(),
+            delegate: delegate
+        )
     }
 }

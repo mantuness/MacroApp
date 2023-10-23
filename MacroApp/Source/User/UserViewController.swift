@@ -30,12 +30,25 @@ final class UserViewController: UIViewController {
     }
 }
 
-final class UserViewControllerFactory {
+protocol UserViewControllerFactory {
+    func create(id: Int, delegate: UserViewControllerDelegate) -> UserViewController
+}
+
+final class FactoryUserViewControllerFactory: UserViewControllerFactory {
     private let viewModelFactory: UserViewModelFactory
     init(viewModelFactory: UserViewModelFactory) {
         self.viewModelFactory = viewModelFactory
     }
     func create(id: Int, delegate: UserViewControllerDelegate) -> UserViewController {
         return UserViewController(viewModel: viewModelFactory.create(id: id), delegate: delegate)
+    }
+}
+
+final class MDIUserViewControllerFactory: UserViewControllerFactory {
+    func create(id: Int, delegate: UserViewControllerDelegate) -> UserViewController {
+        UserViewController(
+            viewModel: MDIDependency.resolve(UserViewModel.self, id: id),
+            delegate: delegate
+        )
     }
 }

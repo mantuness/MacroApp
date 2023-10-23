@@ -5,21 +5,21 @@ import Factory
 extension Container {
     var initialViewControllerFactory: Factory<InitialViewControllerFactory> {
         Factory(self) {
-            InitialViewControllerFactory(
+            ResolverInitialViewControllerFactory(
                 viewModelProvider: self.initialViewModel
             )
         }
     }
     var userViewControllerFactory: Factory<UserViewControllerFactory> {
         Factory(self) {
-            UserViewControllerFactory(
+            FactoryUserViewControllerFactory(
                 viewModelFactory: self.userViewModelFactory.resolve()
             )
         }
     }
     var settingsViewControllerFactory: Factory<SettingsViewControllerFactory> {
         Factory(self) {
-            SettingsViewControllerFactory(
+            ResolverSettingsViewControllerFactory(
                 viewModelProvider: self.settingsViewModel
             )
         }
